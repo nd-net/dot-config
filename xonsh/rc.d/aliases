@@ -1,0 +1,16 @@
+#!/usr/bin/env xonsh
+# aliases
+
+aliases["grep"] = "grep --color=auto"
+#aliases["cdf"] = lambda: aliases["cd"]([$(pwdf)[:-1]])
+aliases["ssh"] = "assh wrapper ssh"
+#aliases["op-signin"] = lambda args: ${...}.update({"OP_SESSION_{}".format(args[0]): $(op signin --output=raw @(args[0])).strip()})
+# make the elipsis an alias for cd ..
+aliases.update(("…" * i, ["cd", "/".join([".."] * i)]) for i in range(1, 4))
+# Run http server in the current directory.
+aliases['http-here'] = 'python3 -m http.server'
+
+# Modern alternatives to Unix tools
+aliases['cat'] = 'bat'
+aliases['less'] = 'bat'
+aliases['ls'] = 'exa'

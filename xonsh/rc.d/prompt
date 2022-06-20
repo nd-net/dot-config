@@ -1,0 +1,13 @@
+# prompt
+
+if $PROMPT_FIELDS['prompt_end'] == '#':
+    $PROMPT_FIELDS['prompt_end'] = '{RED}#'
+else:
+    $PROMPT_FIELDS['prompt_end'] = '{INTENSE_GREEN}$'
+
+$PROMPT = "{env_name:{} }{BLUE}{short_cwd} {prompt_end}{RESET} "
+$BOTTOM_TOOLBAR = $BOTTOM_TOOLBAR = "{$XONSH_VERSION} {INTENSE_YELLOW}{user}{#ff1493}@{hostname}{RESET} {gitstatus}{RESET}" + 100 * " "
+
+#$MULTILINE_PROMPT='{INTENSE_GREEN}.'
+# Remove front dot in multiline input to make the code copy-pastable.
+$MULTILINE_PROMPT=' '

@@ -1,0 +1,47 @@
+#!/usr/bin/env xonsh
+def pb(value=None, *, l=False, of=None, prefer="txt"):
+    """
+The pasteboard.
+
+The first parameter is the value to copy into the pasteboard. If it is missing, then the function returns the current content of the pasteboard.
+
+You can work with it like this:
+
+>>> s = pb()
+>>> s = s.replace("foo", "bar")
+>>> pb(s)
+
+Named parameters:
+  - `l`(ines): if True, then the function returns a list of lines, and it joins lists passed to it.
+  - `of`: the pasteboard to use:
+    * nothing, empty, or "general": The pasteboard that’s used for ordinary cut, copy, and paste operations.
+    * "find" or "/": The pasteboard that holds information about the current state of the active application’s find panel.
+    * "font": The pasteboard that holds font and character information and supports Copy Font and Paste Font commands that may be implemented in a text editor.
+    * "ruler": The pasteboard that holds information about paragraph formats in support of the Copy Ruler and Paste Ruler commands that may be implemented in a text editor.
+  - `prefer`:
+    * nothing, or "txt": Plain text
+    * "rtf": Rich Text
+    * "ps": Postscript
+    """
+    
+    if not of:
+        of = "general"
+    elif of == "/":
+        of = "find"
+    
+    if value is not None:
+        if l and not isinstance(value, str):
+            try:
+                value = "\n".join(value)
+            except:
+                pass
+        echo -n @(value)|pbcopy -pboard @(of)
+        
+        return
+    else:
+        value = $(pbpaste -pboard @(of) -Prefer @(prefer))
+        
+        if l:
+            value = value.splitlines()
+        
+        return value
