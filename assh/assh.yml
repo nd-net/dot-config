@@ -1,0 +1,30 @@
+hosts:
+    uberspace:
+        HostName: citrus.uber.space
+        User: citrus
+        
+    beka-gateway:
+        HostName: gateway.beka-software.at
+        User: dev
+        LocalForward:
+        - 50100 192.168.10.51:3389
+        - 50200 192.168.10.52:3389
+        - 1433 192.168.10.52:1433
+
+templates:
+    ipv6:
+        Gateways:
+        - direct
+        - uberspace
+    
+defaults:
+    HashKnownHosts: yes
+    VerifyHostKeyDNS: ask
+    VisualHostKey: yes
+    AddKeysToAgent: yes
+    UseKeychain: yes
+    
+    Hooks:
+        # Automatically backup ~/.ssh/config
+        BeforeConfigWrite:
+        - 'exec set -x; cp {{.SSHConfigPath}} {{.SSHConfigPath}}.bkp'
