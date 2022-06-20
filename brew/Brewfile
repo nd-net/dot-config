@@ -1,0 +1,241 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-drivers"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
+# Library for command-line editing
+brew "readline"
+# Download with resuming and segmented downloading
+brew "aria2"
+# Utility to check whether MAC addresses are already taken on a LAN
+brew "arping"
+# Extendable version manager with support for Ruby, Node.js, Erlang & more
+brew "asdf"
+# Advanced SSH config - Regex, aliases, gateways, includes and dynamic hosts
+brew "assh"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
+brew "clang-format"
+# Statistics utility to count lines of code
+brew "cloc"
+# Configurable talking characters in ASCII art
+brew "cowsay"
+# Modern replacement for 'ls'
+brew "exa"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# Distributed revision control system
+brew "git"
+# Git extension for versioning large files
+brew "git-lfs"
+# Blazing fast terminal-ui for git written in rust
+brew "gitui"
+# World's fastest and most advanced password recovery utility
+brew "hashcat"
+# Convert source code to formatted text with syntax highlighting
+brew "highlight"
+# Swiss Army Knife for macOS
+brew "m-cli"
+# Move files and folders to the trash
+brew "macos-trash"
+# Mac App Store command-line interface
+brew "mas"
+# Remote terminal application
+brew "mosh"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
+# 7-Zip (high compression file archiver) implementation
+brew "p7zip"
+# Run SQL directly on CSV or TSV files
+brew "q"
+# Tools for and transforming and inspecting PDF files
+brew "qpdf"
+# Version control system designed to be a better CVS
+brew "subversion"
+# Formatting tool for reformatting Swift code
+brew "swiftformat"
+# Manipulate and query tags on macOS files
+brew "tag"
+# Granddaddy of HTML tools, with support for modern standards
+brew "tidy-html5"
+# Lightweight BitTorrent client
+brew "transmission-cli"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Command-line helper for the 1Password password manager
+cask "1password-cli"
+# Apple TV Aerial screensaver
+cask "aerial"
+# Professional image editing software
+cask "affinity-photo"
+# Data backup and storage service
+cask "backblaze"
+# Menu bar icon organizer
+cask "bartender"
+# App to create, design, edit and browse SQLite 3 database files
+cask "base"
+# Text, code, and markup editor
+cask "bbedit"
+# Analyze, inspect, and play songs
+cask "beatunes"
+# Utility to create and modify archives
+cask "betterzip"
+# Scriptable scratchpad for developers
+cask "boop"
+# Tool to modify file icons
+cask "candybar"
+# Hard disk backup and cloning utility
+cask "carbon-copy-cloner"
+# Contacts manager
+cask "cardhop"
+# Multi-language programming editor
+cask "coderunner"
+# API documentation browser and code snippet manager
+cask "dash"
+# Web browser
+cask "firefox"
+cask "font-fira-code"
+cask "font-source-code-pro"
+cask "font-source-sans-pro"
+# Automated organization
+cask "hazel"
+# Hex editor focussing on speed
+cask "hex-fiend"
+# Free and open-source media player
+cask "iina"
+# iPhone management application
+cask "imazing"
+# System monitoring app
+cask "istat-menus"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
+# Spot and merge differences in text and image files or folders
+cask "kaleidoscope"
+# Notebook, scrapbook and organizer tool
+cask "keep-it"
+# Tool to show what is persistently installed on the computer
+cask "knockknock"
+# Productivity tool
+cask "launchbar"
+# Software for Logitech devices
+cask "logi-options-plus"
+# Software for Logitech devices
+cask "logitech-options"
+# Manages online multimedia libs of German, Austrian and Swiss public broadcasters
+cask "mediathekview"
+# Tag editor for digital music
+cask "meta"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
+# Email client
+cask "microsoft-outlook"
+# Meet, chat, call, and collaborate in just one place
+cask "microsoft-teams"
+# Manage your windows in Mission Control
+cask "mission-control-plus"
+# Tool to create text-based art
+cask "monodraw"
+# Mounts servers and cloud storages as a disk on the desktop
+cask "mountain-duck"
+# Turn vector drawings into program code
+cask "paintcode"
+# HTTP client that helps testing and describing APIs
+cask "paw"
+# Modern and intuitive HTTP Debugging Proxy app
+cask "proxyman"
+# QuickLook plug-in that renders source code with syntax highlighting
+cask "qlcolorcode"
+cask "qlgradle"
+# Display image info and preview unsupported formats in QuickLook
+cask "qlimagesize"
+# QuickLook generator for Markdown files
+cask "qlmarkdown"
+cask "qlprettypatch"
+cask "qlstephen"
+cask "quicklook-csv"
+cask "quicklook-json"
+# Document management
+cask "receipts"
+# Wireless screen-mirroring application
+cask "reflector"
+# Remote desktop software
+cask "screens-connect"
+# Tool that provides consistent, highly configurable symbols for apps
+cask "sf-symbols"
+# Notepad with a built-in calculator
+cask "soulver"
+# Sound and audio controller
+cask "soundsource"
+# Mux and tag mp4 files
+cask "subler"
+# Application for inspecting installer packages
+cask "suspicious-package"
+# Remote access and connectivity software focused on security
+cask "teamviewer"
+# Git client focusing on power and productivity
+cask "tower"
+# Turn websites into apps
+cask "unite"
+# Virtual machines UI using QEMU
+cask "utm"
+# Manage digital artifacts for your movie, television and anime collections
+cask "vimediamanager"
+# Multimedia player
+cask "vlc"
+# Allows access to WWDC livestreams, videos and sessions
+cask "wwdc"
+# Install and switch between multiple versions of Xcode
+cask "xcodes"
+# Tools for measuring, inspecting & testing on-screen graphics and layouts
+cask "xscope"
+mas "1Blocker", id: 1365531024
+mas "Affinity Designer", id: 824171161
+mas "Apple Configurator", id: 1037126344
+mas "AutoMounter", id: 1160435653
+mas "Brother iPrint&Scan", id: 1193539993
+mas "Create Booklet 2", id: 1350225911
+mas "DaisyDisk", id: 411643860
+mas "Day One", id: 1055511498
+mas "Developer", id: 640199958
+mas "Diagrams", id: 1276248849
+mas "Disk Drill Media Recovery", id: 431224317
+mas "Fantastical", id: 975937182
+mas "Fileloupe", id: 944693506
+mas "Friendly Streaming", id: 553245401
+mas "GarageBand", id: 682658836
+mas "iCaching", id: 420484346
+mas "iMovie", id: 408981434
+mas "JSON Editor", id: 567740330
+mas "Just Press Record", id: 979561272
+mas "Keynote", id: 409183694
+mas "Lieferungen", id: 290986013
+mas "Mactracker", id: 430255202
+mas "Magic Number", id: 737047715
+mas "MindNode", id: 1289197285
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Paprika Recipe Manager 3", id: 1303222628
+mas "Pastel", id: 413897608
+mas "PDF Viewer", id: 1120099014
+mas "PhotoSweeper", id: 463362050
+mas "Pixelmator Pro", id: 1289583905
+mas "Prime Video", id: 545519333
+mas "Reeder", id: 1529448980
+mas "Screens", id: 1224268771
+mas "Shareful", id: 1522267256
+mas "SourceryPro", id: 1561780836
+mas "StopTheMadness", id: 1376402589
+mas "Taio", id: 1527036273
+mas "ThemeInstaller", id: 1148208665
+mas "TuneSpan", id: 528459889
+mas "Tweetbot", id: 1384080005
+mas "Userscripts", id: 1463298887
+mas "Vectornator", id: 1219074514
+mas "Yoink", id: 457622435
