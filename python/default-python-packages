@@ -1,0 +1,19 @@
+# Xonsh and dependencies
+pygments
+prompt-toolkit
+setproctitle
+xonsh
+
+# Requirements for xonsh itself
+# install this using `xpip install -r requirements.txt`
+xontrib-sh
+xontrib-argcomplete
+xontrib-commands
+
+# Youtube-DL
+youtube-dl
+
+# PIP extensions
+pipupgrade
+pipdeptree
+
