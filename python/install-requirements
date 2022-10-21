@@ -1,3 +1,5 @@
 #!/bin/sh
+# This script is unnecessary if you are using asdf to install Python and
+# if $ASDF_PYTHON_DEFAULT_PACKAGES_FILE points to default-python-packages
 pip install --upgrade-strategy eager -r $(dirname $0)/default-python-packages
 asdf reshim
