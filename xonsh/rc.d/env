@@ -1,17 +1,17 @@
 #!/usr/bin/env xonsh
 
-$XDG_CONFIG_HOME = $HOME + "/.config"
-$XDG_CACHE_HOME = $HOME + "/.cache"
-$XDG_DATA_HOME = $HOME + "/.local/share"
-$XDG_STATE_HOME = $HOME + "/.local/state"
+$XDG_CONFIG_HOME = p"$HOME/.config"
+$XDG_CACHE_HOME = p"$HOME/.cache"
+$XDG_DATA_HOME = p"$HOME/.local/share"
+$XDG_STATE_HOME = p"$HOME/.local/state"
 
-$ASDF_DATA_DIR = $XDG_DATA_HOME + "/asdf"
-$ASDF_CONFIG_FILE = $XDG_CONFIG_HOME + "/asdf/asdfrc"
 $ASDF_DEFAULT_TOOL_VERSIONS_FILENAME = $XDG_CONFIG_HOME + "/asdf/tool-versions"
+$ASDF_DATA_DIR = p"$XDG_DATA_HOME/asdf"
+$ASDF_CONFIG_FILE = p"$XDG_CONFIG_HOME/asdf/asdfrc"
 
-$ASDF_PYTHON_DEFAULT_PACKAGES_FILE = $XDG_CONFIG_HOME + "/python/default-python-packages"
-$ASDF_NPM_DEFAULT_PACKAGES_FILE = $XDG_CONFIG_HOME + "/npm/default-npm-packages"
-$ASDF_GEM_DEFAULT_PACKAGES_FILE = $XDG_CONFIG_HOME + "/ruby/default-gems"
+$ASDF_PYTHON_DEFAULT_PACKAGES_FILE = p"$XDG_CONFIG_HOME/python/default-python-packages"
+$ASDF_NPM_DEFAULT_PACKAGES_FILE = p"$XDG_CONFIG_HOME/npm/default-npm-packages"
+$ASDF_GEM_DEFAULT_PACKAGES_FILE = p"$XDG_CONFIG_HOME/ruby/default-gems"
 
 $HOMEBREW_NO_ENV_HINTS = True
 
@@ -28,6 +28,7 @@ source '~/.local/share/asdf/plugins/java/set-java-home.xsh'
 
 # Path variables
 
-$d = $HOME + "/Developer"
-$icloud = $HOME + "/Library/Mobile Documents"
-$PATH.append("/Users/nd/Developer/shell-scripts/bin") 
+$d = p"$HOME/Developer"
+$icloud = p"$HOME/Library/Mobile Documents"
+$PATH.append("/Users/nd/Developer/shell-scripts/bin")
+$PATH.append(p"$HOME/.local/bin")
