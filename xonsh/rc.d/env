@@ -5,9 +5,17 @@ $XDG_CACHE_HOME = p"$HOME/.cache"
 $XDG_DATA_HOME = p"$HOME/.local/share"
 $XDG_STATE_HOME = p"$HOME/.local/state"
 
-$ASDF_DEFAULT_TOOL_VERSIONS_FILENAME = $XDG_CONFIG_HOME + "/asdf/tool-versions"
 $ASDF_DATA_DIR = p"$XDG_DATA_HOME/asdf"
 $ASDF_CONFIG_FILE = p"$XDG_CONFIG_HOME/asdf/asdfrc"
+# don't use ASDF_DEFAULT_TOOL_VERSIONS_FILENAME:
+# this environment variable controls the filename for both local and
+# and global settings, therefore using a path name causes asdf to choke
+# https://github.com/asdf-vm/asdf/pull/1295
+#
+# As a workaround, link the tool-versions file in the config to $HOME
+#$ASDF_DEFAULT_TOOL_VERSIONS_FILENAME = ".config/asdf/tool-versions"
+if not p"$HOME/.tool-versions".exists():
+	ln -s p"$HOME/.config/asdf/tool-versions" p"$HOME/.tool-versions"
 
 $ASDF_PYTHON_DEFAULT_PACKAGES_FILE = p"$XDG_CONFIG_HOME/python/default-python-packages"
 $ASDF_NPM_DEFAULT_PACKAGES_FILE = p"$XDG_CONFIG_HOME/npm/default-npm-packages"
