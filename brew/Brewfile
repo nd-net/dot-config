@@ -17,6 +17,10 @@ brew "asdf"
 brew "assh"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# 7-Zip (high compression file archiver) implementation
+brew "p7zip"
+# Searches a binary image for embedded files and executable code
+brew "binwalk"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 # Statistics utility to count lines of code
@@ -51,8 +55,6 @@ brew "mas"
 brew "mosh"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
-# 7-Zip (high compression file archiver) implementation
-brew "p7zip"
 # Run SQL directly on CSV or TSV files
 brew "q"
 # Tools for and transforming and inspecting PDF files
@@ -67,6 +69,8 @@ brew "tag"
 brew "tidy-html5"
 # Lightweight BitTorrent client
 brew "transmission-cli"
+# Command-line XML beautifier and content extractor
+brew "xq"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line helper for the 1Password password manager
@@ -95,6 +99,8 @@ cask "candybar"
 cask "carbon-copy-cloner"
 # Contacts manager
 cask "cardhop"
+# Managed desktop virtualization solution
+cask "citrix-workspace"
 # Multi-language programming editor
 cask "coderunner"
 # API documentation browser and code snippet manager
@@ -104,6 +110,10 @@ cask "firefox"
 cask "font-fira-code"
 cask "font-source-code-pro"
 cask "font-source-sans-pro"
+cask "font-xkcd"
+cask "font-xkcd-script"
+# Virtual globe
+cask "google-earth-pro"
 # Automated organization
 cask "hazel"
 # Hex editor focussing on speed
@@ -112,6 +122,8 @@ cask "hex-fiend"
 cask "iina"
 # iPhone management application
 cask "imazing"
+# IDE for Java development - community edition
+cask "intellij-idea-ce"
 # System monitoring app
 cask "istat-menus"
 # Terminal emulator as alternative to Apple's Terminal app
@@ -126,8 +138,8 @@ cask "knockknock"
 cask "launchbar"
 # Software for Logitech devices
 cask "logi-options-plus"
-# Software for Logitech devices
-cask "logitech-options"
+# Open-source, KeePass-client and password manager
+cask "macpass"
 # Manages online multimedia libs of German, Austrian and Swiss public broadcasters
 cask "mediathekview"
 # Tag editor for digital music
@@ -158,8 +170,11 @@ cask "qlimagesize"
 # QuickLook generator for Markdown files
 cask "qlmarkdown"
 cask "qlprettypatch"
+# QuickLook plugin for plaintext files without an extension
 cask "qlstephen"
+# QuickLook plugin for CSV files
 cask "quicklook-csv"
+# QuickLook plugin for JSON files
 cask "quicklook-json"
 # Document management
 cask "receipts"
@@ -200,6 +215,8 @@ mas "Affinity Designer", id: 824171161
 mas "Apple Configurator", id: 1037126344
 mas "AutoMounter", id: 1160435653
 mas "Brother iPrint&Scan", id: 1193539993
+mas "CARROT Weather", id: 993487541
+mas "Consent-O-Matic", id: 1606897889
 mas "Create Booklet 2", id: 1350225911
 mas "DaisyDisk", id: 411643860
 mas "Day One", id: 1055511498
@@ -210,6 +227,7 @@ mas "Fantastical", id: 975937182
 mas "Fileloupe", id: 944693506
 mas "Friendly Streaming", id: 553245401
 mas "GarageBand", id: 682658836
+mas "Geofency", id: 615538630
 mas "iCaching", id: 420484346
 mas "iMovie", id: 408981434
 mas "JSON Editor", id: 567740330
@@ -219,6 +237,7 @@ mas "Lieferungen", id: 290986013
 mas "Mactracker", id: 430255202
 mas "Magic Number", id: 737047715
 mas "MindNode", id: 1289197285
+mas "Mini Metro+", id: 1550663539
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paprika Recipe Manager 3", id: 1303222628
@@ -238,4 +257,5 @@ mas "TuneSpan", id: 528459889
 mas "Tweetbot", id: 1384080005
 mas "Userscripts", id: 1463298887
 mas "Vectornator", id: 1219074514
+mas "Vinegar", id: 1591303229
 mas "Yoink", id: 457622435
