@@ -9,6 +9,7 @@ xonsh
 xontrib-sh
 xontrib-argcomplete
 xontrib-commands
+xonsh-autoxsh
 
 # Youtube-DL
 youtube-dl
