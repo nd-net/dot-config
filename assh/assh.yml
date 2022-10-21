@@ -1,4 +1,8 @@
 hosts:
+    mikrotik:
+        HostName: 192.168.42.23
+        User: admin
+
     uberspace:
         HostName: citrus.uber.space
         User: citrus
