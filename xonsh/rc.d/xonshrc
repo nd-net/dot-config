@@ -29,8 +29,8 @@ $CASE_SENSITIVE_COMPLETIONS = False
 $CLICOLOR = True
 $LSCOLORS = "gxfxcxcxbxehbhAbcbCgBg" # from http://geoff.greer.fm/lscolors/"
 # Make Exa's timestamp color a brighter shade of blue
-$EXA_COLORS="da=1;34"
-$VISUAL = "/usr/local/bin/bbedit"
+$EXA_COLORS = "da=1;34"
+$VISUAL = "/opt/homebrew/bin/bbedit"
 $GIT_EDITOR = $VISUAL
 
 # Don't clear the screen after quitting a manual page.
