@@ -21,6 +21,8 @@ $ASDF_PYTHON_DEFAULT_PACKAGES_FILE = p"$XDG_CONFIG_HOME/python/default-python-pa
 $ASDF_NPM_DEFAULT_PACKAGES_FILE = p"$XDG_CONFIG_HOME/npm/default-npm-packages"
 $ASDF_GEM_DEFAULT_PACKAGES_FILE = p"$XDG_CONFIG_HOME/ruby/default-gems"
 
+$IPYTHONDIR = p"$XDG_CONFIG_HOME/ipython"
+
 $HOMEBREW_NO_ENV_HINTS = True
 
 $CP_HOME_DIR = "/opt/cocoapods"
