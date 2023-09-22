@@ -3,8 +3,9 @@ tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
+tap "majd/repo"
 # Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
+brew "openssl@3"
 # Library for command-line editing
 brew "readline"
 # Download with resuming and segmented downloading
@@ -29,6 +30,8 @@ brew "cloc"
 brew "cowsay"
 # Modern replacement for 'ls'
 brew "exa"
+# Efficient Duplicate File Finder
+brew "fclones"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Play, record, convert, and stream audio and video
@@ -45,6 +48,8 @@ brew "gitui"
 brew "hashcat"
 # Convert source code to formatted text with syntax highlighting
 brew "highlight"
+# CLI tool for searching and downloading iOS app packages from the App Store
+brew "ipatool"
 # Swiss Army Knife for macOS
 brew "m-cli"
 # Move files and folders to the trash
@@ -53,8 +58,6 @@ brew "macos-trash"
 brew "mas"
 # Remote terminal application
 brew "mosh"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
 # Run SQL directly on CSV or TSV files
 brew "q"
 # Tools for and transforming and inspecting PDF files
@@ -65,18 +68,22 @@ brew "subversion"
 brew "swiftformat"
 # Manipulate and query tags on macOS files
 brew "tag"
+# Powerful free data recovery utility
+brew "testdisk"
 # Granddaddy of HTML tools, with support for modern standards
 brew "tidy-html5"
 # Lightweight BitTorrent client
 brew "transmission-cli"
-# Command-line XML beautifier and content extractor
+# Command-line XML and HTML beautifier and content extractor
 brew "xq"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
-# Command-line helper for the 1Password password manager
+# Command-line interface for 1Password
 cask "1password-cli"
 # Apple TV Aerial screensaver
 cask "aerial"
+# Multi-track audio editor and recorder
+cask "audacity"
 # Professional image editing software
 cask "affinity-photo"
 # Data backup and storage service
@@ -91,8 +98,12 @@ cask "bbedit"
 cask "beatunes"
 # Utility to create and modify archives
 cask "betterzip"
+# 3D model editor for boxy models and pixel art textures
+cask "blockbench"
 # Scriptable scratchpad for developers
 cask "boop"
+# E-books management software
+cask "calibre"
 # Tool to modify file icons
 cask "candybar"
 # Hard disk backup and cloning utility
@@ -103,10 +114,11 @@ cask "cardhop"
 cask "citrix-workspace"
 # Multi-language programming editor
 cask "coderunner"
-# API documentation browser and code snippet manager
-cask "dash"
+# Run Stable Diffusion locally
+cask "diffusionbee"
 # Web browser
 cask "firefox"
+# Free monospaced font with programming ligatures
 cask "font-fira-code"
 cask "font-source-code-pro"
 cask "font-source-sans-pro"
@@ -130,10 +142,12 @@ cask "istat-menus"
 cask "iterm2"
 # Spot and merge differences in text and image files or folders
 cask "kaleidoscope"
-# Notebook, scrapbook and organizer tool
+# Notebook, scrapbook and organiser tool
 cask "keep-it"
 # Tool to show what is persistently installed on the computer
 cask "knockknock"
+# Tool for managing the Kobo e-reader
+cask "kobo"
 # Productivity tool
 cask "launchbar"
 # Software for Logitech devices
@@ -154,21 +168,19 @@ cask "microsoft-teams"
 cask "mission-control-plus"
 # Tool to create text-based art
 cask "monodraw"
-# Mounts servers and cloud storages as a disk on the desktop
-cask "mountain-duck"
 # Turn vector drawings into program code
 cask "paintcode"
 # HTTP client that helps testing and describing APIs
 cask "paw"
-# Modern and intuitive HTTP Debugging Proxy app
-cask "proxyman"
 # QuickLook plug-in that renders source code with syntax highlighting
-cask "qlcolorcode"
+cask "jpc-qlcolorcode"
+# QuickLook plugin for viewing gradle files
 cask "qlgradle"
 # Display image info and preview unsupported formats in QuickLook
 cask "qlimagesize"
 # QuickLook generator for Markdown files
 cask "qlmarkdown"
+# QuickLook plugin to view patch files
 cask "qlprettypatch"
 # QuickLook plugin for plaintext files without an extension
 cask "qlstephen"
@@ -182,6 +194,8 @@ cask "receipts"
 cask "reflector"
 # Remote desktop software
 cask "screens-connect"
+# Collection of apps available by subscription
+cask "setapp"
 # Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
 # Notepad with a built-in calculator
@@ -192,6 +206,8 @@ cask "soundsource"
 cask "subler"
 # Application for inspecting installer packages
 cask "suspicious-package"
+# Mesh VPN based on Wireguard
+cask "tailscale"
 # Remote access and connectivity software focused on security
 cask "teamviewer"
 # Git client focusing on power and productivity
@@ -211,7 +227,6 @@ cask "xcodes"
 # Tools for measuring, inspecting & testing on-screen graphics and layouts
 cask "xscope"
 mas "1Blocker", id: 1365531024
-mas "Affinity Designer", id: 824171161
 mas "Apple Configurator", id: 1037126344
 mas "AutoMounter", id: 1160435653
 mas "Brother iPrint&Scan", id: 1193539993
@@ -228,8 +243,10 @@ mas "Fileloupe", id: 944693506
 mas "Friendly Streaming", id: 553245401
 mas "GarageBand", id: 682658836
 mas "Geofency", id: 615538630
+mas "Hush", id: 1544743900
 mas "iCaching", id: 420484346
 mas "iMovie", id: 408981434
+mas "Ivory", id: 6444602274
 mas "JSON Editor", id: 567740330
 mas "Just Press Record", id: 979561272
 mas "Keynote", id: 409183694
@@ -255,7 +272,7 @@ mas "Taio", id: 1527036273
 mas "ThemeInstaller", id: 1148208665
 mas "TuneSpan", id: 528459889
 mas "Tweetbot", id: 1384080005
-mas "Userscripts", id: 1463298887
+mas "Userscripts-Mac-App", id: 1463298887
 mas "Vectornator", id: 1219074514
 mas "Vinegar", id: 1591303229
 mas "Yoink", id: 457622435
