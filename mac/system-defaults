@@ -58,15 +58,3 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 
 # Show the Dock on the right side of the Screen
 defaults write com.apple.dock orientation right
-
-echo "Safari 🧭"
-
-# Show favorites bar in Safari by default
-defaults write com.apple.Safari ShowFavoritesBar -bool true
-
-# Show status bar in Safari
-defaults write com.apple.Safari ShowOverlayStatusBar -bool true
-
-# Show full website address
-defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
-

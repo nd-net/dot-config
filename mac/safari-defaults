@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo "Quicklook 👓"
+
+# Configuration from https://github.com/jpc/QLColorCode
+
+# Use Fira Code 8pt as default font
+defaults write org.n8gray.QLColorCode font "Fira Code"
+defaults write org.n8gray.QLColorCode fontSizePoints 8
+
+
