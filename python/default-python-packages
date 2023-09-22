@@ -20,3 +20,10 @@ pipdeptree
 
 # IPython
 ipython
+
+# Requests is an elegant and simple HTTP library for Python, built for human beings
+requests
+# Beautiful Soup is a library that makes it easy to scrape information from web pages. It sits atop an HTML or XML parser, providing Pythonic idioms for iterating, searching, and modifying the parse tree.
+beautifulsoup4
+# Rich is a Python library for writing rich text (with color and style) to the terminal, and for displaying advanced content such as tables, markdown, and syntax highlighted code.
+rich
