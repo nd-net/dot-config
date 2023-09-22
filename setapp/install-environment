@@ -1,0 +1,3 @@
+#!/bin/sh
+# The -launchAfterInstall parameter is pretty much straightforward. Omitting it will allow to install the apps silently.
+grep -v '#' ~/.config/setapp/Setappfile |  tr \\n \\0 | xargs -0 -p -J % /Applications/Setapp.app/Contents/MacOS/Setapp -installApps % "$*"
