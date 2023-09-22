@@ -14,4 +14,4 @@ aliases['http-here'] = 'python3 -m http.server'
 aliases['cat'] = 'bat'
 aliases['less'] = 'bat'
 aliases['ls'] = 'exa'
-aliases['youtube-dl'] = ["youtube-dl", "-f", "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"]
+aliases['youtube-dl'] = ["yt-dlp", "-f", "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"]
