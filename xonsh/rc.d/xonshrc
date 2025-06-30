@@ -28,8 +28,8 @@ $CASE_SENSITIVE_COMPLETIONS = False
 
 $CLICOLOR = True
 $LSCOLORS = "gxfxcxcxbxehbhAbcbCgBg" # from http://geoff.greer.fm/lscolors/"
-# Make Exa's timestamp color a brighter shade of blue
-$EXA_COLORS = "da=1;34"
+# Make Eza's timestamp color a brighter shade of blue
+$EZA_COLORS = "da=1;34"
 $VISUAL = "/opt/homebrew/bin/bbedit"
 $GIT_EDITOR = $VISUAL
 
@@ -41,5 +41,9 @@ $LESS = "--ignore-case --quit-if-one-screen --quit-on-intr FRXQ"
 
 # Automatically execution of .autoxsh xonsh script after entering (cd-ing) into the directory.
 xontrib load autoxsh
+# auto-activate venv as one cd into a poetry project folder
+xontrib load avox_poetry
+# Python virtual environment manager for xonsh
+xontrib load vox
 # Useful xonsh-shell commands/alias/completer functions
 xontrib load commands

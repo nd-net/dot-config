@@ -29,7 +29,7 @@ brew "cloc"
 # Configurable talking characters in ASCII art
 brew "cowsay"
 # Modern replacement for 'ls'
-brew "exa"
+brew "eza"
 # Efficient Duplicate File Finder
 brew "fclones"
 # Simple, fast and user-friendly alternative to find
@@ -88,8 +88,6 @@ cask "audacity"
 cask "affinity-photo"
 # Data backup and storage service
 cask "backblaze"
-# Menu bar icon organizer
-cask "bartender"
 # App to create, design, edit and browse SQLite 3 database files
 cask "base"
 # Text, code, and markup editor
