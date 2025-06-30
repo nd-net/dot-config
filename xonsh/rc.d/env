@@ -1,9 +1,19 @@
 #!/usr/bin/env xonsh
 
+# XDG base configuration
+
 $XDG_CONFIG_HOME = p"$HOME/.config"
 $XDG_CACHE_HOME = p"$HOME/.cache"
 $XDG_DATA_HOME = p"$HOME/.local/share"
 $XDG_STATE_HOME = p"$HOME/.local/state"
+# Used for non-essential, user-specific data files such as sockets, named pipes, etc.
+# Not required to have a default value; warnings should be issued if not set or equivalents provided.
+$XDG_RUNTIME_DIR = p""
+
+### XDG tool configuration ###
+
+# XDG configurations for applications that by default don't honor XDG 
+# https://wiki.archlinux.org/title/XDG_Base_Directory
 
 $ASDF_DATA_DIR = p"$XDG_DATA_HOME/asdf"
 $ASDF_CONFIG_FILE = p"$XDG_CONFIG_HOME/asdf/asdfrc"
