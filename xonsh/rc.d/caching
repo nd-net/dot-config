@@ -1,0 +1,210 @@
+#!/usr/bin/env xonsh
+
+from typing import NamedTuple
+
+def qs(source, codepoint_translation=None, char_mapping=None, start=None):
+    """Calculates the cross-sum for numbers or letters. The standard letter mapping is 0..9 is always 0-9, 1..26 for a-z, and ä=ae, ö=oe, ü=ue, ß=ss, but can be changed via the mapping parameter. Mappings that aren't passed in use the default mapping. You can change the standard start-value using the start variable."""
+    if isinstance(source, int):
+        source = str(source)
+    if start is None:
+    	start = 1
+    if codepoint_translation is None:
+	    codepoint_translation = {"ä": "ae", "ö": "oe", "ü": "ue", "ß": "ss"}
+    if char_mapping is None:
+    	char_mapping = {}
+        for i in range(10):
+            char_mapping[str(i)] = i
+	    for i in range(26):
+	        char_mapping[chr(i + 0x61)] = i + start
+    n = 0
+    for ch in source.lower():
+    	for translated in codepoint_translation.get(ch, ch):
+			v = char_mapping.get(translated)
+			if v is not None:
+				n += v
+    return n
+
+def iqs(source, codepoint_translation=None, char_mapping=None, start=None):
+    v = qs(source, codepoint_translation, char_mapping, start)
+    while v >= 10:
+        v = qs(source, codepoint_translation, char_mapping, start)
+    return v
+
+
+class CLLocation(NamedTuple):
+    """A geo-location with latitude and longitude."""
+    latitude: float
+    longitude: float
+        
+    @classmethod
+    def from_string(cls, coord_str: str):
+        """
+        Parses a string like 'N 48 19.064 E 013 27.821' into a GeoCoordinate object.
+        """
+        import re
+        pattern = re.compile(
+            r'([NS])\s+(\d{1,2})\s+(\d{1,2}\.\d+)\s+([EW])\s+(\d{1,3})\s+(\d{1,2}\.\d+)',
+            re.IGNORECASE
+        )
+        match = pattern.match(coord_str.strip())
+        if not match:
+            raise ValueError("Invalid coordinate format. Expected format like 'N 48 19.064 E 013 27.821'.")
+            
+        lat_hem, lat_deg, lat_min, lon_hem, lon_deg, lon_min = match.groups()
+        
+        latitude = int(lat_deg) + float(lat_min) / 60
+        if lat_hem.upper() == 'S':
+            latitude = -latitude
+            
+        longitude = int(lon_deg) + float(lon_min) / 60
+        if lon_hem.upper() == 'W':
+            longitude = -longitude
+            
+        return cls(latitude, longitude)
+    
+    def __repr__(self):
+        return f"CLLocation(latitude={self.latitude}, longitude={self.longitude})"
+    
+    def _format(self, name, parts):
+        formats = ["{}", "{} {:.6f}", "{} {:02d}° {:06.3f}", "{} {:02d}° {:02d}′ {:05.2f}″"]
+        items = []
+        if name == "lat":
+            value = self.latitude
+            items.append("N" if value >= 0 else "S")
+        else:
+            value = self.longitude
+            items.append("E" if self.longitude >= 0 else "W")
+        value = abs(value)
+        while len(items) < parts:
+            v = int(value)
+            items.append(v)
+            value = 60 * (value - v)
+        items.append(value)
+        return formats[parts].format(*items)
+    
+    def distance_to(self, other, R=6371):
+        """Calculate distance to another GeoCoordinate in kilometers using the Haversine formula."""
+        from math import radians, sin, cos, sqrt, atan2
+
+        lat1, lon1 = radians(self.latitude), radians(self.longitude)
+        lat2, lon2 = radians(other.latitude), radians(other.longitude)
+
+        dlat = lat2 - lat1
+        dlon = lon2 - lon1
+
+        a = sin(dlat / 2)**2 + cos(lat1) * cos(lat2) * sin(dlon / 2)**2
+        c = 2 * atan2(sqrt(a), sqrt(1 - a))
+
+        return R * c
+
+    
+    @property
+    def dm(self):
+        return self.__format__("dm")
+    
+    def __str__(self):
+        return self.__format__("dm")
+    
+    def __format__(self, format_spec):
+        if not format_spec:
+            return f"{self.latitude:.6f}, {self.longitude:.6f}"
+        if format_spec == 'd':
+            parts = 1
+        elif format_spec == 'dm':
+            parts = 2
+        elif format_spec == 'dms':
+            parts = 3
+        else:
+            raise ValueError(f"Unsupported format specifier: {format_spec}")
+        return self._format("lat", parts) + " " + self._format("lng", parts)
+
+def reverseWiG(code, variant=False):
+    """
+    Parses a reverse WiG cache code containing exactly 18 digits. Uses the
+	standard WiG format by default.
+	If `variant` is True or if the standard code does not contain valid directions, then parsing uses the 10 year anniversary variant instead.
+	"""
+    # Algorithm from https://www.geoclub.de/forum/t/reverse-wherigo-algorithmus.82124/
+    q = []
+    if isinstance(code, int):
+    	code = f"{code:018}"
+    for i in code:
+        if i.isspace():
+            continue
+        if i.isdigit():
+            q.append(int(i))
+        else:
+            raise ValueError("Code must only contain digits or whitespace")
+    if len(q) != 18:
+        raise ValueError("Code must be a string containing exactly 18 digits.")
+        
+    def unmagix(q):
+        for i in range(len(q)):
+            res = (q[i] - (i + 1)) % 10
+            if res < 0:
+                res += 10
+            q[i] = res
+        return q[0:6] + q[12:] + q[6:12]
+        
+    def calcChecksum(values, indices):
+        s = 0
+        for factor, value, index in zip(range(2, 10), values, indices):
+            s += factor * value[index]
+        cs = 11 - (s % 11)
+        if cs == 11:
+            return 5
+        if cs == 10:
+            return 0
+        return cs
+    
+    def checksum(lat, lng):
+        if (lat[5] + lng[6]) % 2 == 0:
+            b3_ = calcChecksum([q, lng, lat, lat, lng, lat, lat, lng], [3, 5, 0, 6, 0, 2, 4, 4])
+            c3_ = calcChecksum([lng, lng, lng, lat, lat, lng, lng, lat], [1, 6, 7, 3, 1, 2, 3, 5])
+        else:
+            b3_ = calcChecksum([q, lng, lat, lat, lng, lng, lat, lat], [3, 2, 2, 1, 3, 7, 6, 0])
+            c3_ = calcChecksum([lat, lng, lng, lat, lng, lng, lng, lat], [3, 6, 5, 4, 0, 1, 4, 5])
+        checksumError = []
+        if q[8] != b3_:
+            checksumError.append(f"Digit in line 2 fails checksum {q[6]}{q[7]}|{q[8]}!={b3_}|{q[9]}{q[10]}{q[11]}")
+        if q[14] != c3_:
+            checksumError.append(f"Digit in line 3 fails checksum {q[12]}{q[13]}|{q[14]}!={c3_}|{q[15]}{q[16]}{q[17]}")
+        if checksumError:
+            raise ValueError("\n".join(checksumError))
+    
+    def val(prefix, items):
+        result = 0
+        for item in items:
+            result = result * 10 + item
+        return prefix * result / 1e5
+
+    if variant:
+        q = unmagix(q)
+
+    directions = {
+        1: (+1, +1),
+        2: (-1, +1),
+        3: (+1, -1),
+        4: (-1, -1),
+    }
+    try:
+        d = directions[q[3]]
+    except KeyError:
+    	if not variant:
+    		print("Using variant")
+    		q = unmagix(q)
+    	try:
+    		d = directions[q[3]]
+    	except KeyError:
+	        raise ValueError(f"a4 must be one of {directions.keys()}")
+        
+    if (q[13] + q[16]) % 2 == 0:
+        latmap = [2, 10, 7, 15, 0, 16, 5]
+        lngmap = [1, 12, 17, 9, 6, 4, 13, 11]
+    else:
+        latmap = [6, 5, 2, 12, 15, 16, 0]
+        lngmap = [10, 17, 4, 1, 9, 11, 13, 7]
+    lat = [q[i] for i in latmap]
+    lng = [q[i] for i in lngmap]
+    checksum(lat, lng)
+    return CLLocation(val(d[0], lat), val(d[1], lng))
