@@ -5,3 +5,5 @@ sys.path.append(str(p"~/Developer/gcbox/"))
 
 from wig import reverseWiG
 from text import qs, iqs
+from model import Coordinate2D, GCCode
+from utils import mapsurl
