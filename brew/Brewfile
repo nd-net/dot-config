@@ -12,8 +12,8 @@ brew "readline"
 brew "aria2"
 # Utility to check whether MAC addresses are already taken on a LAN
 brew "arping"
-# Extendable version manager with support for Ruby, Node.js, Erlang & more
-brew "asdf"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
 # Advanced SSH config - Regex, aliases, gateways, includes and dynamic hosts
 brew "assh"
 # Clone of cat(1) with syntax highlighting and Git integration

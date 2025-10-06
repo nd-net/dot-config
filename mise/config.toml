@@ -1,0 +1,12 @@
+[tools]
+assh = "latest"
+dotnet = "8"
+java = "latest"
+lua = "latest"
+perl = "latest"
+python = "latest"
+swiftformat = "latest"
+swiftgen = "latest"
+uv = "latest"
+
+[env]
