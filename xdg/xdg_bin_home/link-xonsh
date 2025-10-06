@@ -1,0 +1,2 @@
+#!/bin/sh
+ln -sf $(mise which xonsh) $XDG_BIN_HOME

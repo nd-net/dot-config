@@ -6,6 +6,7 @@ $XDG_CONFIG_HOME = p"$HOME/.config"
 $XDG_CACHE_HOME = p"$HOME/.cache"
 $XDG_DATA_HOME = p"$HOME/.local/share"
 $XDG_STATE_HOME = p"$HOME/.local/state"
+$XDG_BIN_HOME = p"$HOME/.local/bin"
 # Used for non-essential, user-specific data files such as sockets, named pipes, etc.
 # Not required to have a default value; warnings should be issued if not set or equivalents provided.
 $XDG_RUNTIME_DIR = p""
@@ -43,4 +44,4 @@ $DOTNET_CLI_TELEMETRY_OPTOUT=1
 $d = p"$HOME/Developer"
 $icloud = p"$HOME/Library/Mobile Documents"
 $PATH.append("/Users/nd/Developer/shell-scripts/bin")
-$PATH.append(p"$HOME/.local/bin")
+$PATH.append($XDG_BIN_HOME)
