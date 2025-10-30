@@ -15,5 +15,12 @@ uv = "latest"
 
 [env]
 
+# https://mise.jdx.dev/configuration/settings.html
 [settings]
 idiomatic_version_file_enable_tools = ["python", "ruby", "node"]
+
+[settings.python]
+default_packages_file = "{{ get_env(name='XDG_CONFIG_HOME', default='~/.config') }}/python/default-python-packages"
+
+[settings.ruby]
+default_packages_file = "{{ get_env(name='XDG_CONFIG_HOME', default='~/.config') }}/ruby/default-gems"

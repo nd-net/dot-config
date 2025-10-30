@@ -1,6 +1,4 @@
 #!/usr/bin/env xonsh
-$MISE_PYTHON_DEFAULT_PACKAGES_FILE=p"$XDG_CONFIG_HOME/python/default-python-packages"
-
 $MISE_SHELL = 'xonsh'
 
 def _mise(args):
