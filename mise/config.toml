@@ -1,18 +1,17 @@
 [tools]
 assh = "latest"
 dotnet = "8"
+gemini = "latest"
 go = "latest"
 java = "latest"
 lua = "latest"
+node = "latest"
 perl = "latest"
+python = "latest"
 rust = "latest"
 swiftformat = "latest"
 swiftgen = "latest"
 uv = "latest"
-
-[tools.python]
-version="latest"
-postinstall="echo use link-xonsh to activate a newly installed xonsh"
 
 [env]
 

@@ -18,27 +18,25 @@ youtube-dl
 yt-dlp
 
 # PIP extensions
-pipupgrade
+#pipupgrade
 # pipupgrade depends on distutils, which as of Python 3.12 is not a member of the standard distribution anymore https://stackoverflow.com/a/77284076/112964
-setuptools
-pipdeptree
+#setuptools
+#pipdeptree
 
 # IPython
 ipython
 
 # Virtual environments
-pipx
-xontrib-vox
-xontrib-avox-poetry
+xontrib-uvox
 
 # Others
 # Requests is an elegant and simple HTTP library for Python, built for human beings
-requests
+#requests
 # Beautiful Soup is a library that makes it easy to scrape information from web pages. It sits atop an HTML or XML parser, providing Pythonic idioms for iterating, searching, and modifying the parse tree.
-beautifulsoup4
+#beautifulsoup4
 # Rich is a Python library for writing rich text (with color and style) to the terminal, and for displaying advanced content such as tables, markdown, and syntax highlighted code.
-rich
+#rich
 # Z3 is a theorem prover from Microsoft Research.
-z3-solver
+#z3-solver
 # sqlite3 with extensions
-sqlean.py
+#sqlean.py
