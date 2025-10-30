@@ -41,9 +41,7 @@ $LESS = "--ignore-case --quit-if-one-screen --quit-on-intr FRXQ"
 
 # Automatically execution of .autoxsh xonsh script after entering (cd-ing) into the directory.
 xontrib load autoxsh
-# auto-activate venv as one cd into a poetry project folder
-xontrib load avox_poetry
-# Python virtual environment manager for xonsh
-xontrib load vox
+# A uv-based Python virtual environment manager for the xonsh shell.
+xontrib load uvox
 # Useful xonsh-shell commands/alias/completer functions
 xontrib load commands

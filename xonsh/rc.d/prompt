@@ -1,3 +1,4 @@
+#!/usr/bin/env xonsh
 # prompt
 
 if $PROMPT_FIELDS['prompt_end'] == '#':

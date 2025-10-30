@@ -1,19 +1,19 @@
+#!/usr/bin/env xonsh
 $MISE_PYTHON_DEFAULT_PACKAGES_FILE=p"$XDG_CONFIG_HOME/python/default-python-packages"
 
 $MISE_SHELL = 'xonsh'
 
 def _mise(args):
-  if args and args[0] in ('deactivate', 'shell', 'sh'):
-    execx($(/opt/homebrew/bin/mise @(args)))
-  else:
-    /opt/homebrew/bin/mise @(args)
+    if args and args[0] in ('deactivate', 'shell', 'sh'):
+      execx($(/opt/homebrew/bin/mise @(args)))
+    else:
+      /opt/homebrew/bin/mise @(args)
 
 
 from xonsh.built_ins import XSH
-import shlex
 import subprocess
 
-extra_args = shlex.split('')
+extra_args = []
 def mise_hook(**kwargs): # Hook Events
     script = subprocess.run(
         ['/opt/homebrew/bin/mise', 'hook-env', *extra_args, '-s', 'xonsh'],

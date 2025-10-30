@@ -1,7 +1,7 @@
 #!/usr/bin/env xonsh
 
 import sys
-sys.path.append(str(p"~/Developer/gcbox/"))
+sys.path.append(str(p"~/Developer/gcbox/src"))
 
 from wig import reverseWiG
 from text import qs, iqs

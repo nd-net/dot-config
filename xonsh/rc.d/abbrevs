@@ -1,4 +1,4 @@
-#!/usr/bun/env xonsh
+#!/usr/bin/env xonsh
 # Command abbreviations.
 #
 # This expands input words from `abbrevs` disctionary as you type.

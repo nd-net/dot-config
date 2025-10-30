@@ -1,0 +1,6 @@
+#!/opt/homebrew/bin/mise tool-stub
+# Optional comment describing the tool
+
+version = "latest"
+tool = "python"
+bin = "xonsh"

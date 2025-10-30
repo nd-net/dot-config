@@ -16,8 +16,10 @@ $XDG_RUNTIME_DIR = p""
 # XDG configurations for applications that by default don't honor XDG 
 # https://wiki.archlinux.org/title/XDG_Base_Directory
 
-$IPYTHONDIR = p"$XDG_CONFIG_HOME/ipython"
-$VIRTUALENV_HOME = p"$XDG_DATA_HOME/virtualenvs"
+# The VIRTUALENV_HOME is being used by the various vox implementations
+# and must be a string instead of a Path
+$IPYTHONDIR = str(p"$XDG_CONFIG_HOME/ipython")
+$VIRTUALENV_HOME = str(p"$XDG_DATA_HOME/virtualenvs")
 
 #$NUGET_PACKAGES=p"$XDG_CACHE_HOME/NuGetPackages"
 
