@@ -3,4 +3,4 @@
 $XONSH_COLOR_STYLE = 'native'
 # XONSH WEBCONFIG END
 
-source g`~/.config/xonsh/rc.d/*`
+source -e g`~/.config/xonsh/rc.d/*`

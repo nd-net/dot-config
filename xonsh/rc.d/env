@@ -27,6 +27,16 @@ $VIRTUALENV_HOME = str(p"$XDG_DATA_HOME/virtualenvs")
 # see npm config ls -l | grep /
 $NPM_CONFIG_USERCONFIG=p"$XDG_CONFIG_HOME/npm/npmrc"
 
+# Yarn
+$YARN_RC_FILENAME=p"$XDG_CONFIG_HOME/yarn/yarnrc.yml"
+
+# Gradle
+$GRADLE_USER_HOME=p"$XDG_CACHE_HOME/gradle"
+
+# Rusup
+$RUSTUP_HOME=p"$XDG_DATA_HOME/rustup"
+$CARGO_HOME=p"$XDG_DATA_HOME/cargo"
+
 ### /XDG tool configurations ###
 
 # Other configurations
