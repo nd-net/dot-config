@@ -1,0 +1,17 @@
+# Lines starting with # are comments
+
+# Remote components to allow yt-dlp to fetch when required. 
+# This option is currently not needed if you are using an official executable or have the requisite version
+# of the yt-dlp-ejs package installed.
+# You can use this option multiple times to allow multiple components.
+# Supported values:
+# * ejs:npm (external JavaScript components from npm)
+# * ejs:github (external JavaScript components from yt-dlp-ejs GitHub).
+# By default, no remote components are allowed
+
+--remote-components ejs:github
+
+# The name of the browser to load cookies from. Currently supported browsers are:
+# brave, chrome, chromium, edge, firefox, opera, safari, vivaldi, whale.
+
+--cookies-from-browser safari

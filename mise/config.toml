@@ -1,5 +1,6 @@
 [tools]
 assh = "latest"
+deno = "latest"
 dotnet = "8"
 gemini = "latest"
 go = "latest"
