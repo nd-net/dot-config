@@ -1,5 +1,6 @@
 #!/usr/bin/env xonsh
 $MISE_SHELL = 'xonsh'
+$MISE_PYTHON_DEFAULT_PACKAGES_FILE = p"~/.config/python/default-python-packages"
 
 def _mise(args):
     if args and args[0] in ('deactivate', 'shell', 'sh'):
