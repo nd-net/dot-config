@@ -41,7 +41,8 @@ $LESS = "--ignore-case --quit-if-one-screen --quit-on-intr FRXQ"
 
 # Automatically execution of .autoxsh xonsh script after entering (cd-ing) into the directory.
 xontrib load autoxsh
+# Those below don't work right now!?
 # A uv-based Python virtual environment manager for the xonsh shell.
-xontrib load uvox
+#xontrib load uvox
 # Useful xonsh-shell commands/alias/completer functions
-xontrib load commands
+#xontrib load commands
