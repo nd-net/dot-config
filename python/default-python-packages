@@ -13,6 +13,9 @@ xontrib-argcomplete
 xontrib-commands
 xonsh-autoxsh
 
+# Requirement for xontrib-commands that isn't installed
+typing-extensions
+
 # Youtube-DL
 youtube-dl
 yt-dlp
