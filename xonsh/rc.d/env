@@ -21,7 +21,7 @@ $XDG_RUNTIME_DIR = p""
 $IPYTHONDIR = str(p"$XDG_CONFIG_HOME/ipython")
 $VIRTUALENV_HOME = str(p"$XDG_DATA_HOME/virtualenvs")
 
-#$NUGET_PACKAGES=p"$XDG_CACHE_HOME/NuGetPackages"
+$NUGET_PACKAGES=p"$XDG_DATA_HOME/nuget/packages"
 
 # npm
 # see npm config ls -l | grep /
@@ -36,6 +36,17 @@ $GRADLE_USER_HOME=p"$XDG_CACHE_HOME/gradle"
 # Rusup
 $RUSTUP_HOME=p"$XDG_DATA_HOME/rustup"
 $CARGO_HOME=p"$XDG_DATA_HOME/cargo"
+
+# Azure (az)
+$AZURE_CONFIG_DIR=p"$XDG_CONFIG_HOME/azure"
+# GnuPG
+$GNUPGHOME=p"$XDG_DATA_HOME/gnupg"
+
+# Codex
+$CODEX_HOME=p"$XDG_DATA_HOME/codex"
+
+$LESSHISTFILE=p"$XDG_STATE_HOME/less/history"
+$PYTHONHISTFILE=p"$XDG_STATE_HOME/python/history"
 
 ### /XDG tool configurations ###
 
