@@ -1,0 +1,8 @@
+#!/bin/zsh
+me=$(basename $0)
+mkdir -p ~/.claude
+for i in *; do
+    if [[ "$i" != "$me" ]]; then
+        ln -s "$(dirs)/$i" ~/.claude/
+    fi
+done
