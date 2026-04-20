@@ -1,9 +1,9 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-drivers"
-tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "majd/repo"
+tap "mergestat/mergestat"
+
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
 # Library for command-line editing
@@ -12,23 +12,23 @@ brew "readline"
 brew "aria2"
 # Utility to check whether MAC addresses are already taken on a LAN
 brew "arping"
-# Polyglot runtime manager (asdf rust clone)
-brew "mise"
-# Advanced SSH config - Regex, aliases, gateways, includes and dynamic hosts
-brew "assh"
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # 7-Zip (high compression file archiver) implementation
 brew "p7zip"
 # Searches a binary image for embedded files and executable code
 brew "binwalk"
-# Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
-brew "clang-format"
+# SMT solver for fixed-size bit-vectors
+brew "boolector"
 # Statistics utility to count lines of code
 brew "cloc"
-# Configurable talking characters in ASCII art
-brew "cowsay"
-# Modern replacement for 'ls'
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Perl lib for reading and writing EXIF metadata
+brew "exiftool"
+# Modern, maintained replacement for ls
 brew "eza"
 # Efficient Duplicate File Finder
 brew "fclones"
@@ -38,42 +38,62 @@ brew "fd"
 brew "ffmpeg"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# Interpreter for PostScript and PDF
+brew "ghostscript"
 # Distributed revision control system
 brew "git"
 # Git extension for versioning large files
 brew "git-lfs"
 # Blazing fast terminal-ui for git written in rust
 brew "gitui"
+# GNU Privacy Guard (OpenPGP)
+brew "gnupg"
 # World's fastest and most advanced password recovery utility
 brew "hashcat"
 # Convert source code to formatted text with syntax highlighting
 brew "highlight"
-# CLI tool for searching and downloading iOS app packages from the App Store
-brew "ipatool"
+# Advanced HTML-to-text converter
+brew "html2text"
+# Command-line editor
+brew "id3v2"
+# Subtitle renderer for the ASS/SSA subtitle format
+brew "libass"
+# Adds spatial SQL capabilities to SQLite
+brew "libspatialite"
+# Count lines of code quickly
+brew "loc"
 # Swiss Army Knife for macOS
 brew "m-cli"
 # Move files and folders to the trash
-brew "macos-trash"
+brew "macos-trash", link: true
 # Mac App Store command-line interface
 brew "mas"
-# Remote terminal application
-brew "mosh"
-# Run SQL directly on CSV or TSV files
-brew "q"
+# High performance static file server
+brew "miniserve"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
+# Cross-platform library for audio I/O
+brew "portaudio"
+# Framework for managing multi-language pre-commit hooks
+brew "pre-commit"
 # Tools for and transforming and inspecting PDF files
 brew "qpdf"
-# Version control system designed to be a better CVS
-brew "subversion"
-# Formatting tool for reformatting Swift code
-brew "swiftformat"
 # Manipulate and query tags on macOS files
 brew "tag"
 # Powerful free data recovery utility
 brew "testdisk"
 # Granddaddy of HTML tools, with support for modern standards
 brew "tidy-html5"
+# Terminal multiplexer
+brew "tmux"
 # Lightweight BitTorrent client
 brew "transmission-cli"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Cross platform GUI for Maxima
+brew "wxmaxima"
+# Best command-line tool to install and switch between multiple versions of Xcode
+brew "xcodes", link: false
 # Command-line XML and HTML beautifier and content extractor
 brew "xq"
 # Password manager that keeps all passwords secure behind one password
@@ -84,8 +104,6 @@ cask "1password-cli"
 cask "aerial"
 # Multi-track audio editor and recorder
 cask "audacity"
-# Professional image editing software
-cask "affinity-photo"
 # Data backup and storage service
 cask "backblaze"
 # App to create, design, edit and browse SQLite 3 database files
@@ -112,8 +130,8 @@ cask "cardhop"
 cask "citrix-workspace"
 # Multi-language programming editor
 cask "coderunner"
-# Run Stable Diffusion locally
-cask "diffusionbee"
+# OpenAI's Codex desktop app for managing coding agents
+cask "codex-app"
 # Web browser
 cask "firefox"
 # Free monospaced font with programming ligatures
@@ -132,26 +150,34 @@ cask "hex-fiend"
 cask "iina"
 # iPhone management application
 cask "imazing"
-# IDE for Java development - community edition
-cask "intellij-idea-ce"
-# System monitoring app
-cask "istat-menus"
+# Java IDE by JetBrains
+cask "intellij-idea"
+# CLI tool for searching and downloading iOS app packages from the App Store
+cask "majd/repo/ipatool"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Optimise and personalise your Jabra headset
+cask "jabra-direct"
+# Quick Look plug-in that renders source code with syntax highlighting
+cask "jpc-qlcolorcode"
 # Spot and merge differences in text and image files or folders
 cask "kaleidoscope"
 # Notebook, scrapbook and organiser tool
 cask "keep-it"
 # Tool to show what is persistently installed on the computer
 cask "knockknock"
-# Tool for managing the Kobo e-reader
+# Desktop reader for Kobo eBooks
 cask "kobo"
+# Utility that shows the latest app updates
+cask "latest"
 # Productivity tool
 cask "launchbar"
 # Software for Logitech devices
-cask "logi-options-plus"
-# Open-source, KeePass-client and password manager
-cask "macpass"
+cask "logi-options+"
+# Cable-free audio router
+cask "loopback"
+# Speech recognition tool
+cask "macwhisper"
 # Manages online multimedia libs of German, Austrian and Swiss public broadcasters
 cask "mediathekview"
 # Tag editor for digital music
@@ -168,28 +194,30 @@ cask "mission-control-plus"
 cask "monodraw"
 # Turn vector drawings into program code
 cask "paintcode"
-# HTTP client that helps testing and describing APIs
-cask "paw"
-# QuickLook plug-in that renders source code with syntax highlighting
-cask "jpc-qlcolorcode"
-# QuickLook plugin for viewing gradle files
+# HTTP debugging proxy
+cask "proxyman"
+# IDE for Python programming - Community Edition
+cask "pycharm-ce"
+# Geographic Information System
+cask "qgis"
+# Quick Look plugin for viewing gradle files
 cask "qlgradle"
 # Display image info and preview unsupported formats in QuickLook
 cask "qlimagesize"
-# QuickLook generator for Markdown files
-cask "qlmarkdown"
-# QuickLook plugin to view patch files
+# Quick Look plugin to view patch files
 cask "qlprettypatch"
-# QuickLook plugin for plaintext files without an extension
+# Quick Look plugin for plaintext files without an extension
 cask "qlstephen"
-# QuickLook plugin for CSV files
+# Quick Look plugin for CSV files
 cask "quicklook-csv"
-# QuickLook plugin for JSON files
-cask "quicklook-json"
+# HTTP client that helps testing and describing APIs
+cask "rapidapi"
 # Document management
 cask "receipts"
 # Wireless screen-mirroring application
 cask "reflector"
+# Control apps and web videos from your phone
+cask "remote-buddy"
 # Remote desktop software
 cask "screens-connect"
 # Collection of apps available by subscription
@@ -218,6 +246,8 @@ cask "utm"
 cask "vimediamanager"
 # Multimedia player
 cask "vlc"
+# Network protocol analyzer
+cask "wireshark-app"
 # Allows access to WWDC livestreams, videos and sessions
 cask "wwdc"
 # Install and switch between multiple versions of Xcode
@@ -228,19 +258,20 @@ mas "1Blocker", id: 1365531024
 mas "Apple Configurator", id: 1037126344
 mas "AutoMounter", id: 1160435653
 mas "Brother iPrint&Scan", id: 1193539993
-mas "CARROT Weather", id: 993487541
+mas "CARROTweather", id: 993487541
+mas "Clever Data Recovery", id: 431224317
 mas "Consent-O-Matic", id: 1606897889
 mas "Create Booklet 2", id: 1350225911
 mas "DaisyDisk", id: 411643860
 mas "Day One", id: 1055511498
 mas "Developer", id: 640199958
 mas "Diagrams", id: 1276248849
-mas "Disk Drill Media Recovery", id: 431224317
 mas "Fantastical", id: 975937182
 mas "Fileloupe", id: 944693506
 mas "Friendly Streaming", id: 553245401
 mas "GarageBand", id: 682658836
 mas "Geofency", id: 615538630
+mas "glyfs", id: 1611012797
 mas "Hush", id: 1544743900
 mas "iCaching", id: 420484346
 mas "iMovie", id: 408981434
@@ -249,28 +280,36 @@ mas "JSON Editor", id: 567740330
 mas "Just Press Record", id: 979561272
 mas "Keynote", id: 409183694
 mas "Lieferungen", id: 290986013
+mas "Linearity Curve", id: 1219074514
 mas "Mactracker", id: 430255202
-mas "Magic Number", id: 737047715
-mas "MindNode", id: 1289197285
+mas "Magic Number 2", id: 737047715
+mas "ManReader", id: 522583774
+mas "Mast", id: 1437429129
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Word", id: 462054704
+mas "MindNode", id: 6446116532
+mas "MindNode Classic", id: 1289197285
 mas "Mini Metro+", id: 1550663539
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paprika Recipe Manager 3", id: 1303222628
+mas "Passepartout", id: 1433648537
 mas "Pastel", id: 413897608
 mas "PDF Viewer", id: 1120099014
 mas "PhotoSweeper", id: 463362050
 mas "Pixelmator Pro", id: 1289583905
 mas "Prime Video", id: 545519333
 mas "Reeder", id: 1529448980
-mas "Screens", id: 1224268771
+mas "Screens 4", id: 1224268771
 mas "Shareful", id: 1522267256
 mas "SourceryPro", id: 1561780836
 mas "StopTheMadness", id: 1376402589
+mas "Swift Playground", id: 1496833156
 mas "Taio", id: 1527036273
 mas "ThemeInstaller", id: 1148208665
 mas "TuneSpan", id: 528459889
-mas "Tweetbot", id: 1384080005
-mas "Userscripts-Mac-App", id: 1463298887
-mas "Vectornator", id: 1219074514
+mas "Uplock", id: 6469049274
+mas "Userscripts", id: 1463298887
 mas "Vinegar", id: 1591303229
 mas "Yoink", id: 457622435
