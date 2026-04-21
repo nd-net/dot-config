@@ -1,0 +1,6 @@
+[cloud]
+name = AzureCloud
+
+[extension]
+dynamic_install_allow_preview = true
+

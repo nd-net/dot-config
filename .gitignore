@@ -3,3 +3,5 @@
 /ruby/Gemfile.lock
 /ipython/profile_default/history.sqlite
 iterm2/AppSupport
+/azure/*
+!/azure/config
