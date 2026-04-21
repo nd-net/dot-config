@@ -1,0 +1,26 @@
+// Callibri (CAL) Jira workflow
+// Render: dot -Tpng callibri-workflow.dot -o callibri-workflow.png
+// Or live preview: xdot callibri-workflow.dot
+
+digraph CallibriWorkflow {
+    rankdir=LR;
+    node [shape=box, style=rounded];
+
+    // Forward path (green edges)
+    edge [color="darkgreen"];
+    "In Analysis"             -> "Open"                     [label="Ready4Planning"];
+    "Open"                    -> "Selected for Development" [label="Select 4 Development"];
+    "Selected for Development"-> "In Progress"              [label="Start Progress"];
+    "In Progress"             -> "In Code Review"           [label="Implementation Done"];
+    "In Code Review"          -> "Done"                     [label="Code Reviewed"];
+
+    // Backward transitions (gray)
+    edge [color="gray"];
+    "Open"                    -> "In Analysis"              [label="ReAnalyse"];
+    "Selected for Development"-> "Open"                     [label="Back 2 Backlog"];
+    "In Progress"             -> "Selected for Development" [label="Stop Progress"];
+
+    // Terminal (red)
+    edge [color="firebrick"];
+    "Open" -> "Closed" [label="Close"];
+}

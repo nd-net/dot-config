@@ -23,5 +23,6 @@
     }
   },
   "autoMemoryEnabled": true,
-  "autoDreamEnabled": true
+  "autoDreamEnabled": true,
+  "effortLevel": "high"
 }
