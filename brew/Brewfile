@@ -1,9 +1,5 @@
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
 tap "majd/repo"
 tap "mergestat/mergestat"
-
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
 # Library for command-line editing
@@ -20,8 +16,6 @@ brew "bat"
 brew "p7zip"
 # Searches a binary image for embedded files and executable code
 brew "binwalk"
-# SMT solver for fixed-size bit-vectors
-brew "boolector"
 # Statistics utility to count lines of code
 brew "cloc"
 # Get a file from an HTTP, HTTPS or FTP server
@@ -34,7 +28,7 @@ brew "eza"
 brew "fclones"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# Play, record, convert, and stream audio and video
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # Command-line fuzzy finder written in Go
 brew "fzf"
@@ -98,16 +92,10 @@ brew "xcodes", link: false
 brew "xq"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
-# Command-line interface for 1Password
-cask "1password-cli"
 # Apple TV Aerial screensaver
 cask "aerial"
-# Multi-track audio editor and recorder
-cask "audacity"
 # Data backup and storage service
 cask "backblaze"
-# App to create, design, edit and browse SQLite 3 database files
-cask "base"
 # Text, code, and markup editor
 cask "bbedit"
 # Analyze, inspect, and play songs
@@ -120,8 +108,6 @@ cask "blockbench"
 cask "boop"
 # E-books management software
 cask "calibre"
-# Tool to modify file icons
-cask "candybar"
 # Hard disk backup and cloning utility
 cask "carbon-copy-cloner"
 # Contacts manager
@@ -134,22 +120,17 @@ cask "coderunner"
 cask "codex-app"
 # Web browser
 cask "firefox"
-# Free monospaced font with programming ligatures
 cask "font-fira-code"
-cask "font-source-code-pro"
-cask "font-source-sans-pro"
 cask "font-xkcd"
 cask "font-xkcd-script"
 # Virtual globe
 cask "google-earth-pro"
-# Automated organization
+# Automated organisation
 cask "hazel"
 # Hex editor focussing on speed
 cask "hex-fiend"
 # Free and open-source media player
 cask "iina"
-# iPhone management application
-cask "imazing"
 # Java IDE by JetBrains
 cask "intellij-idea"
 # CLI tool for searching and downloading iOS app packages from the App Store
@@ -158,6 +139,8 @@ cask "majd/repo/ipatool"
 cask "iterm2"
 # Optimise and personalise your Jabra headset
 cask "jabra-direct"
+# Menu bar manager
+cask "jordanbaird-ice"
 # Quick Look plug-in that renders source code with syntax highlighting
 cask "jpc-qlcolorcode"
 # Spot and merge differences in text and image files or folders
@@ -182,14 +165,8 @@ cask "macwhisper"
 cask "mediathekview"
 # Tag editor for digital music
 cask "meta"
-# Provides updates to various Microsoft products
-cask "microsoft-auto-update"
-# Email client
-cask "microsoft-outlook"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
-# Manage your windows in Mission Control
-cask "mission-control-plus"
 # Tool to create text-based art
 cask "monodraw"
 # Turn vector drawings into program code
@@ -202,8 +179,6 @@ cask "pycharm-ce"
 cask "qgis"
 # Quick Look plugin for viewing gradle files
 cask "qlgradle"
-# Display image info and preview unsupported formats in QuickLook
-cask "qlimagesize"
 # Quick Look plugin to view patch files
 cask "qlprettypatch"
 # Quick Look plugin for plaintext files without an extension
@@ -232,8 +207,8 @@ cask "soundsource"
 cask "subler"
 # Application for inspecting installer packages
 cask "suspicious-package"
-# Mesh VPN based on Wireguard
-cask "tailscale"
+# Mesh VPN based on WireGuard
+cask "tailscale-app"
 # Remote access and connectivity software focused on security
 cask "teamviewer"
 # Git client focusing on power and productivity
@@ -251,23 +226,24 @@ cask "wireshark-app"
 # Allows access to WWDC livestreams, videos and sessions
 cask "wwdc"
 # Install and switch between multiple versions of Xcode
-cask "xcodes"
+cask "xcodes-app"
 # Tools for measuring, inspecting & testing on-screen graphics and layouts
 cask "xscope"
 mas "1Blocker", id: 1365531024
+mas "Actions", id: 1586435171
 mas "Apple Configurator", id: 1037126344
 mas "AutoMounter", id: 1160435653
+mas "Bakery", id: 1575220747
 mas "Brother iPrint&Scan", id: 1193539993
-mas "CARROTweather", id: 993487541
 mas "Clever Data Recovery", id: 431224317
 mas "Consent-O-Matic", id: 1606897889
 mas "Create Booklet 2", id: 1350225911
 mas "DaisyDisk", id: 411643860
+mas "Darkroom", id: 953286746
 mas "Day One", id: 1055511498
 mas "Developer", id: 640199958
 mas "Diagrams", id: 1276248849
 mas "Fantastical", id: 975937182
-mas "Fileloupe", id: 944693506
 mas "Friendly Streaming", id: 553245401
 mas "GarageBand", id: 682658836
 mas "Geofency", id: 615538630
@@ -275,19 +251,16 @@ mas "glyfs", id: 1611012797
 mas "Hush", id: 1544743900
 mas "iCaching", id: 420484346
 mas "iMovie", id: 408981434
+mas "Interactful", id: 1528095640
 mas "Ivory", id: 6444602274
 mas "JSON Editor", id: 567740330
-mas "Just Press Record", id: 979561272
+mas "Just Press Record 2", id: 1033342465
 mas "Keynote", id: 409183694
 mas "Lieferungen", id: 290986013
 mas "Linearity Curve", id: 1219074514
 mas "Mactracker", id: 430255202
 mas "Magic Number 2", id: 737047715
 mas "ManReader", id: 522583774
-mas "Mast", id: 1437429129
-mas "Microsoft Excel", id: 462058435
-mas "Microsoft PowerPoint", id: 462062816
-mas "Microsoft Word", id: 462054704
 mas "MindNode", id: 6446116532
 mas "MindNode Classic", id: 1289197285
 mas "Mini Metro+", id: 1550663539
@@ -297,19 +270,22 @@ mas "Paprika Recipe Manager 3", id: 1303222628
 mas "Passepartout", id: 1433648537
 mas "Pastel", id: 413897608
 mas "PDF Viewer", id: 1120099014
+mas "Photomator", id: 1444636541
 mas "PhotoSweeper", id: 463362050
 mas "Pixelmator Pro", id: 1289583905
 mas "Prime Video", id: 545519333
 mas "Reeder", id: 1529448980
 mas "Screens 4", id: 1224268771
 mas "Shareful", id: 1522267256
+mas "Soulver", id: 1508732804
 mas "SourceryPro", id: 1561780836
-mas "StopTheMadness", id: 1376402589
+mas "StopTheScript", id: 1588394487
 mas "Swift Playground", id: 1496833156
 mas "Taio", id: 1527036273
 mas "ThemeInstaller", id: 1148208665
-mas "TuneSpan", id: 528459889
 mas "Uplock", id: 6469049274
-mas "Userscripts", id: 1463298887
+mas "Userscripts-Mac-App", id: 1463298887
 mas "Vinegar", id: 1591303229
-mas "Yoink", id: 457622435
+mas "WireGuard", id: 1451685025
+go "cmd/go"
+go "cmd/gofmt"
