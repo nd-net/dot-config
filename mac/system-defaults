@@ -22,6 +22,8 @@ echo "General UI/UX ⌨️"
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 # Disable automatic termination of inactive apps
 defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
+# Hide unnecessary menu icons
+defaults write -g NSMenuEnableActionImages -bool NO
 
 echo "Finder/Dock 🤖"
 

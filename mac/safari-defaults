@@ -1,11 +1,13 @@
 #!/bin/sh
 
-echo "Quicklook 👓"
+echo "Safari 🧭"
 
-# Configuration from https://github.com/jpc/QLColorCode
+# Show favorites bar in Safari by default
+defaults write com.apple.Safari ShowFavoritesBar -bool true
 
-# Use Fira Code 8pt as default font
-defaults write org.n8gray.QLColorCode font "Fira Code"
-defaults write org.n8gray.QLColorCode fontSizePoints 8
+# Show status bar in Safari
+defaults write com.apple.Safari ShowOverlayStatusBar -bool true
 
+# Show full website address
+defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
 
