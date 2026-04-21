@@ -6,6 +6,7 @@ deno = "latest"
 dotnet = "8"
 gemini = "latest"
 git-lfs = "latest"
+"github:gildas/bitbucket-cli" = "latest"
 gitui = "latest"
 go = "latest"
 htmlq = "latest"
@@ -20,7 +21,12 @@ rust = "latest"
 swiftformat = "latest"
 swiftgen = "latest"
 uv = "latest"
+websocat = "latest"
 xcodes = "latest"
+
+[tools.yt-dlp]
+version = "latest"
+rename_exe = "yt-dlp"
 
 [env]
 # XDG bases

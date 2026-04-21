@@ -16,10 +16,6 @@ xonsh-autoxsh
 # Requirement for xontrib-commands that isn't installed
 typing-extensions
 
-# Youtube-DL
-youtube-dl
-yt-dlp
-
 # PIP extensions
 #pipupgrade
 # pipupgrade depends on distutils, which as of Python 3.12 is not a member of the standard distribution anymore https://stackoverflow.com/a/77284076/112964
