@@ -3,7 +3,10 @@
 import sys
 sys.path.append(str(p"~/Developer/gcbox/src"))
 
-from wig import reverseWiG
-from text import qs, iqs
-from model import Coordinate2D, GCCode
-from utils import mapsurl
+try:
+	from wig import reverseWiG
+	from text import qs, iqs
+	from model import Coordinate2D, GCCode
+	from utils import mapsurl
+except:
+	pass
