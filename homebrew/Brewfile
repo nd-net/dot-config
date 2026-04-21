@@ -36,10 +36,6 @@ brew "fzf"
 brew "ghostscript"
 # Distributed revision control system
 brew "git"
-# Git extension for versioning large files
-brew "git-lfs"
-# Blazing fast terminal-ui for git written in rust
-brew "gitui"
 # GNU Privacy Guard (OpenPGP)
 brew "gnupg"
 # World's fastest and most advanced password recovery utility
@@ -68,8 +64,6 @@ brew "miniserve"
 brew "mise"
 # Cross-platform library for audio I/O
 brew "portaudio"
-# Framework for managing multi-language pre-commit hooks
-brew "pre-commit"
 # Tools for and transforming and inspecting PDF files
 brew "qpdf"
 # Manipulate and query tags on macOS files
@@ -86,8 +80,6 @@ brew "transmission-cli"
 brew "tree"
 # Cross platform GUI for Maxima
 brew "wxmaxima"
-# Best command-line tool to install and switch between multiple versions of Xcode
-brew "xcodes", link: false
 # Command-line XML and HTML beautifier and content extractor
 brew "xq"
 # Password manager that keeps all passwords secure behind one password
