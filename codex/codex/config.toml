@@ -1,0 +1,18 @@
+model = "gpt-5.4"
+model_reasoning_effort = "medium"
+personality = "pragmatic"
+
+[plugins."build-ios-apps@openai-curated"]
+enabled = true
+
+[plugins."build-macos-apps@openai-curated"]
+enabled = true
+
+[plugins."superpowers@openai-curated"]
+enabled = true
+
+[projects."/Users/nd/Documents/Codex/2026-04-21-meta-question-about-your-configuration-is"]
+trust_level = "trusted"
+
+[projects."/Users/nd/Documents/Codex/2026-04-21-meta-question-about-codex-is-it"]
+trust_level = "trusted"

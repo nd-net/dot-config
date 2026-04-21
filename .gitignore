@@ -5,3 +5,12 @@
 iterm2/AppSupport
 /azure/*
 !/azure/config
+
+# Codex: keep user-authored config, ignore runtime state and caches
+/codex/*
+!/codex/codex/
+!/codex/agents/
+/codex/codex/*
+!/codex/codex/config.toml
+!/codex/codex/AGENTS.md
+!/codex/agents/**
