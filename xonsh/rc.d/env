@@ -1,6 +1,8 @@
 #!/usr/bin/env xonsh
 
 # XDG base configuration
+# The $XDG_ configurations are repeated in mise's config.toml as well
+# and mise-tool specific configurations are *only* set by mise
 
 $XDG_CONFIG_HOME = p"$HOME/.config"
 $XDG_CACHE_HOME = p"$HOME/.cache"
@@ -21,29 +23,8 @@ $XDG_RUNTIME_DIR = p""
 $IPYTHONDIR = str(p"$XDG_CONFIG_HOME/ipython")
 $VIRTUALENV_HOME = str(p"$XDG_DATA_HOME/virtualenvs")
 
-$NUGET_PACKAGES = p"$XDG_DATA_HOME/nuget/packages"
-
-# npm
-# see npm config ls -l | grep /
-$NPM_CONFIG_USERCONFIG = p"$XDG_CONFIG_HOME/npm/npmrc"
-
-# Yarn
-$YARN_RC_FILENAME = p"$XDG_CONFIG_HOME/yarn/yarnrc.yml"
-
-# Gradle
-$GRADLE_USER_HOME = p"$XDG_CACHE_HOME/gradle"
-
-# Rusup
-$RUSTUP_HOME = p"$XDG_DATA_HOME/rustup"
-$CARGO_HOME = p"$XDG_DATA_HOME/cargo"
-
-# Azure (az)
-$AZURE_CONFIG_DIR = p"$XDG_CONFIG_HOME/azure"
 # GnuPG
 $GNUPGHOME = p"$XDG_DATA_HOME/gnupg"
-
-# Codex
-$CODEX_HOME = p"$XDG_DATA_HOME/codex"
 
 $LESSHISTFILE = p"$XDG_STATE_HOME/less/history"
 $PYTHONHISTFILE = p"$XDG_STATE_HOME/python/history"
@@ -57,9 +38,6 @@ $HOMEBREW_BUNDLE_DESCRIBE = True
 
 source-zsh $(/usr/libexec/path_helper -s)
 source-zsh $(/opt/homebrew/bin/brew shellenv)
-
-# Disable DOTNET telemetry
-$DOTNET_CLI_TELEMETRY_OPTOUT = 1
 
 # Path variables
 
