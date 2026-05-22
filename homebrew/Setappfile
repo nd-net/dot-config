@@ -1,7 +1,5 @@
 # Mounts cloud storages as local disks
 CloudMounter
-# Workspace organizing app
-Workspaces
 DisplayBuddy
 Lungo
 # API documentation browser and code snippet manager
@@ -9,7 +7,6 @@ Dash
 # HTTP debugging proxy
 Proxyman
 SQLPro for SQLite
-TypingMind
 BetterTouchTool
 CleanMyMac X
 Expressions
@@ -19,5 +16,11 @@ Permute
 24 Hour Wallpaper
 Almighty
 Tripsy
-# Menu bar icon organizer
-Bartender
+# ZIP tool
+BetterZip
+# CPU, GPU, Sensors in the menu bar
+iStat Menus
+# Close windows in Mission Control
+Mission Control Plus
+# Dim windows in the background
+HazeOver
