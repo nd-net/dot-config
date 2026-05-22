@@ -113,6 +113,8 @@ cask "cardhop"
 cask "chatgpt"
 # Managed desktop virtualization solution
 cask "citrix-workspace"
+# Barco ClickShare Desktop App for wireless presentation and conferencing
+cask "nd-net/personal/clickshare"
 # Multi-language programming editor
 cask "coderunner"
 # OpenAI's Codex desktop app for managing coding agents
