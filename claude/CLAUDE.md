@@ -28,21 +28,15 @@ Commit messages should follow these best practices:
 
 - Prefer the LSP tool (goToDefinition, findReferences, incomingCalls, etc.) over grep for navigating code. Fall back to grep only for non-symbol searches (string literals, comments, patterns).
 
-## Bitbucket CLI (`bb`)
+## Python Environment
 
-### Common commands
-- `bb pullrequest list` — list open PRs (auto-detects repo from git remote)
-- `bb pullrequest get <id>` — full PR details including reviewers
-- `bb pullrequest comment list --pullrequest <id>` — list all comments on a PR
-- `bb pullrequest activity list --pullrequest <id>` — activity log (buggy with JSON output)
+Global Python packages are pinned in `~/.config/python/default-python-packages` and installed via `uv pip install --system --requirements ~/.config/python/default-python-packages`. Always available without a venv: `python-docx` (import as `docx`), `lxml`, `requests`, `beautifulsoup4`, `rich`, `z3-solver`, plus xonsh-related packages. Reach for these first instead of installing per-project; for .docx editing in particular, prefer `python-docx` over raw zip+XML manipulation unless byte-perfect template preservation is required.
 
-### Gotchas
-- `--output json` works on `list` and `get`, but NOT reliably on `activity list`
-- `bb pullrequest list` does NOT include full reviewer data; use `get` per PR to check reviewers
-- Subcommands use `--pullrequest <id>` flag, not positional args (e.g. `comment list --pullrequest 18`)
+## Bitbucket CLI (`bkt`)
 
-### `bb-pr` (system-wide helper)
+Use `bkt` (avivsinai/bitbucket-cli) for all Bitbucket work — listing/creating/reviewing PRs, branches, pipelines, issues. Reach for the `bkt` skill for command reference and gotchas; do **not** use `bb` (removed).
+
+### `bkt-pr` (system-wide helper)
 - Lists open PRs grouped by: needs your review, your PRs, no reviewers assigned, other
-- Auto-detects user from `bb profile`
-- `bb-pr` — default usage
-- `bb-pr --user "Name"` — override detected user
+- Single API call with participants included (no N+1 per-PR follow-ups)
+- `bkt-pr` — default usage
