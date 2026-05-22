@@ -1,5 +1,6 @@
 tap "majd/repo"
 tap "mergestat/mergestat"
+tap "nd-net/personal", "https://github.com/nd-net/homebrew-personal.git"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
 # Library for command-line editing
@@ -74,6 +75,8 @@ brew "testdisk"
 brew "tidy-html5"
 # Terminal multiplexer
 brew "tmux"
+# Upgrade all the things
+brew "topgrade"
 # Lightweight BitTorrent client
 brew "transmission-cli"
 # Display directories as trees (with optional color/HTML output)
@@ -82,18 +85,20 @@ brew "tree"
 brew "wxmaxima"
 # Command-line XML and HTML beautifier and content extractor
 brew "xq"
+# Suite of barcodes-reading tools
+brew "zbar"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Apple TV Aerial screensaver
 cask "aerial"
+# Image editing and design software
+cask "affinity"
 # Data backup and storage service
 cask "backblaze"
 # Text, code, and markup editor
 cask "bbedit"
 # Analyze, inspect, and play songs
 cask "beatunes"
-# Utility to create and modify archives
-cask "betterzip"
 # 3D model editor for boxy models and pixel art textures
 cask "blockbench"
 # Scriptable scratchpad for developers
@@ -104,6 +109,8 @@ cask "calibre"
 cask "carbon-copy-cloner"
 # Contacts manager
 cask "cardhop"
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
 # Managed desktop virtualization solution
 cask "citrix-workspace"
 # Multi-language programming editor
@@ -139,8 +146,8 @@ cask "jordanbaird-ice"
 cask "jpc-qlcolorcode"
 # Spot and merge differences in text and image files or folders
 cask "kaleidoscope"
-# Notebook, scrapbook and organiser tool
-cask "keep-it"
+# Notebook, scrapbook and organiser tool (version 2.x)
+cask "nd-net/personal/keep-it@2"
 # Tool to show what is persistently installed on the computer
 cask "knockknock"
 # Desktop reader for Kobo eBooks
@@ -163,10 +170,10 @@ cask "meta"
 cask "microsoft-teams"
 # Tool to create text-based art
 cask "monodraw"
+# AI usage tracker for Cursor, Claude Code, Codex, Copilot and more
+cask "openusage"
 # Turn vector drawings into program code
 cask "paintcode"
-# HTTP debugging proxy
-cask "proxyman"
 # IDE for Python programming - Community Edition
 cask "pycharm-ce"
 # Geographic Information System
@@ -271,7 +278,6 @@ mas "Prime Video", id: 545519333
 mas "Reeder", id: 1529448980
 mas "Screens 4", id: 1224268771
 mas "Shareful", id: 1522267256
-mas "Soulver", id: 1508732804
 mas "SourceryPro", id: 1561780836
 mas "StopTheScript", id: 1588394487
 mas "Swift Playground", id: 1496833156

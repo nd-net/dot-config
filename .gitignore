@@ -11,3 +11,4 @@ iterm2/AppSupport
 !/codex/config.toml
 !/codex/symlink
 !/codex/AGENTS.md
+settings.local.json
