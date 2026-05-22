@@ -1,0 +1,7 @@
+[misc]
+# Disable specific steps - same options as the command line flag
+disable = ["helm"]
+
+# Run these steps before all others - mas requires sudo privileges, so have that first
+first = ["mas"]
+
