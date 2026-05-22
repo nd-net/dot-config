@@ -1,4 +1,59 @@
 {
+  "permissions": {
+    "allow": [
+      "mcp__claude_ai_Atlassian__getAccessibleAtlassianResources",
+      "mcp__claude_ai_Atlassian__getJiraIssue",
+      "WebFetch(domain:github.com)",
+      "Bash(gh release *)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(curl -sL https://api.github.com/repos/avivsinai/bitbucket-cli/contents/docs)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(curl -sL https://api.github.com/repos/avivsinai/bitbucket-cli/contents/cmd/pr)",
+      "Bash(python3 -c \"import json,sys; [print\\(x['name']\\) for x in json.load\\(sys.stdin\\)]\")",
+      "Bash(curl -sL \"https://api.github.com/search/code?q=repo:avivsinai/bitbucket-cli+%22pr+list%22+filename:list.go\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); [print\\(x['path']\\) for x in d.get\\('items',[]\\)[:20]]\")",
+      "Bash(curl -sL \"https://api.github.com/repos/avivsinai/bitbucket-cli/git/trees/master?recursive=1\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); [print\\(x['path']\\) for x in d['tree'] if 'pr' in x['path'].lower\\(\\) and x['path'].endswith\\('.go'\\)][:30]\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/avivsinai/bitbucket-cli/master/pkg/cmd/pr/pr.go\")",
+      "Bash(bb --help)",
+      "Bash(mise exec *)",
+      "Bash(bb pullrequest *)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); [print\\(pr['id'], pr.get\\('source',{}\\).get\\('branch',{}\\).get\\('name',''\\), pr['title'][:60]\\) for pr in d]\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); [print\\(pr['id'], pr['state'], pr.get\\('source',{}\\).get\\('branch',{}\\).get\\('name',''\\), pr['title'][:50]\\) for pr in d if 'CAL-557' in pr.get\\('source',{}\\).get\\('branch',{}\\).get\\('name',''\\) or 'CAL-557' in pr['title']]\")",
+      "Bash(bkt pr *)",
+      "Bash(bkt api *)",
+      "Read(//Users/nd/.config/codex/agents/skills/**)",
+      "Read(//Users/nd/.config/codex/agents/skills/bkt/**)",
+      "Bash(az resource list *)",
+      "Bash(az eventgrid event-subscription show *)",
+      "Bash(az eventgrid event-subscription create *)",
+      "Bash(uv run *)",
+      "Bash(curl -s https://xkcd.com/__TRACKED_VAR__/info.0.json)",
+      "WebSearch",
+      "mcp__claude_ai_Atlassian__searchJiraIssuesUsingJql",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(pbcopy)",
+      "Bash(git push *)",
+      "Bash(bkt --version)",
+      "mcp__plugin_atlassian_atlassian__getJiraIssue",
+      "mcp__plugin_atlassian_atlassian__getTransitionsForJiraIssue",
+      "mcp__plugin_atlassian_atlassian__transitionJiraIssue",
+      "mcp__plugin_atlassian_atlassian__createJiraIssue",
+      "mcp__plugin_atlassian_atlassian__searchJiraIssuesUsingJql",
+      "mcp__plugin_atlassian_atlassian__getAccessibleAtlassianResources",
+      "Bash(bkt-pr *)",
+      "Read(//Users/nd/.agents/skills/bkt/**)",
+      "Read(//Users/nd/.config/claude/**)",
+      "Bash(bkt --help)",
+      "Bash(bkt user *)",
+      "Bash(git fetch *)"
+    ],
+    "deny": [
+      "Read(**/.env)"
+    ],
+    "defaultMode": "default"
+  },
   "enabledPlugins": {
     "code-review@claude-plugins-official": true,
     "pyright-lsp@claude-plugins-official": true,
@@ -20,9 +75,16 @@
         "source": "github",
         "repo": "anthropics/skills"
       }
+    },
+    "claude-tools": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/nd/Developer/BeKa/claude-tools"
+      }
     }
   },
+  "effortLevel": "high",
   "autoMemoryEnabled": true,
   "autoDreamEnabled": true,
-  "effortLevel": "high"
+  "theme": "auto"
 }
