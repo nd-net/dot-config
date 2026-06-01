@@ -13,7 +13,6 @@ gitui = "latest"
 go = "latest"
 htmlq = "latest"
 java = "latest"
-jdtls = "latest"
 jq = "latest"
 lua = "latest"
 node = "latest"
@@ -30,6 +29,15 @@ xcodes = "latest"
 [tools.yt-dlp]
 version = "latest"
 rename_exe = "yt-dlp"
+
+# jdtls has no clean versioned URL (Eclipse ships timestamped tarballs, no GitHub
+# releases) and was dropped from the mise registry, so it's pinned via the http
+# backend. Bump with `mise run jdtls-refresh` (see jdtls-refresh.py).
+[tools."http:jdtls"]
+version = "1.58.0"
+url = "https://download.eclipse.org/jdtls/milestones/1.58.0/jdt-language-server-1.58.0-202604151538.tar.gz"
+checksum = "sha256:2a5bbe55ec91b4325392050dc422cead3220a2459b3766be35e1fff45b4a50d9"
+bin_path = "bin"
 
 [env]
 # XDG bases
@@ -61,3 +69,7 @@ default_packages_file = "{{env.XDG_CONFIG_HOME}}/python/default-python-packages"
 
 [settings.ruby]
 default_packages_file = "{{env.XDG_CONFIG_HOME}}/ruby/default-gems"
+
+[tasks."jdtls-refresh"]
+description = "Pin the latest jdtls milestone into the http:jdtls backend and reinstall"
+run = "python3 \"$HOME/.config/mise/jdtls-refresh.py\""
