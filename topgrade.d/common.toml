@@ -5,3 +5,5 @@ disable = ["helm"]
 # Run these steps before all others - mas requires sudo privileges, so have that first
 first = ["mas"]
 
+# Don't ask for confirmations
+assume_yes = true
