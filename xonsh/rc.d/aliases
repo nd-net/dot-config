@@ -9,6 +9,8 @@ aliases["ssh"] = "assh wrapper ssh"
 aliases.update(("…" * i, ["cd", "/".join([".."] * i)]) for i in range(1, 4))
 # Run http server in the current directory.
 aliases['http-here'] = 'python3 -m http.server'
+# Resume the most recent Claude Code session in the current directory.
+aliases['cclaude'] = ["claude", "--continue"]
 
 # Modern alternatives to Unix tools
 aliases['cat'] = 'bat'
