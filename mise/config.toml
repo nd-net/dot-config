@@ -63,6 +63,7 @@ DOTNET_CLI_TELEMETRY_OPTOUT = "1"
 # https://mise.jdx.dev/configuration/settings.html
 [settings]
 idiomatic_version_file_enable_tools = ["python", "ruby", "node"]
+minimum_release_age_excludes = ["claude", "codex", "gemini", "yt-dlp"]
 
 [settings.python]
 default_packages_file = "{{env.XDG_CONFIG_HOME}}/python/default-python-packages"
