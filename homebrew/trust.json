@@ -1,6 +1,7 @@
 {
   "trustedtaps": [
     "majd/repo",
+    "mergestat/mergestat",
     "nd-net/personal"
   ]
 }
