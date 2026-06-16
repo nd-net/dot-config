@@ -35,6 +35,7 @@ $PYTHONHISTFILE = p"$XDG_STATE_HOME/python/history"
 
 $HOMEBREW_NO_ENV_HINTS = True
 $HOMEBREW_BUNDLE_DESCRIBE = True
+$HOMEBREW_NO_ASK = True
 
 source-zsh $(/usr/libexec/path_helper -s)
 source-zsh $(/opt/homebrew/bin/brew shellenv)
