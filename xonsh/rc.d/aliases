@@ -13,7 +13,6 @@ aliases['http-here'] = 'python3 -m http.server'
 aliases['cclaude'] = ["claude", "--continue"]
 
 # Modern alternatives to Unix tools
-aliases['cat'] = 'bat'
-aliases['less'] = 'bat'
+aliases['cat'] = 'less'
 aliases['ls'] = 'eza'
 aliases['youtube-dl'] = ["yt-dlp", "-f", "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"]
