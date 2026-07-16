@@ -1,9 +1,12 @@
 [misc]
 # Disable specific steps - same options as the command line flag
-disable = ["helm"]
+disable = ["helm", "ruby_gems", "gem"]
 
 # Run these steps before all others - mas requires sudo privileges, so have that first
 first = ["mas"]
 
 # Don't ask for confirmations
 assume_yes = true
+
+[containers]
+ignored_containers = ["*"]
