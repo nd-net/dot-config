@@ -29,6 +29,8 @@ $GNUPGHOME = p"$XDG_DATA_HOME/gnupg"
 $LESSHISTFILE = p"$XDG_STATE_HOME/less/history"
 $PYTHONHISTFILE = p"$XDG_STATE_HOME/python/history"
 
+$DOCKER_CONFIG = p"$XDG_CONFIG_HOME/docker"
+
 ### /XDG tool configurations ###
 
 # Other configurations
