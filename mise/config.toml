@@ -25,6 +25,7 @@ swiftgen = "latest"
 uv = "latest"
 websocat = "latest"
 xcodes = "latest"
+miller = "latest"
 
 [tools.yt-dlp]
 version = "latest"
