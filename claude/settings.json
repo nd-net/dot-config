@@ -52,19 +52,11 @@
     "deny": [
       "Read(**/.env)"
     ],
-    "defaultMode": "default",
+    "defaultMode": "auto",
     "additionalDirectories": [
       "/tmp",
       "/private/tmp"
     ]
-  },
-  "sandbox": {
-    "filesystem": {
-      "allowWrite": [
-        "/tmp",
-        "/private/tmp"
-      ]
-    }
   },
   "enabledPlugins": {
     "code-review@claude-plugins-official": true,
@@ -95,7 +87,17 @@
       }
     }
   },
+  "sandbox": {
+    "filesystem": {
+      "allowWrite": [
+        "/tmp",
+        "/private/tmp"
+      ]
+    }
+  },
+  "cleanupPeriodDays": 14,
   "effortLevel": "high",
+  "tui": "default",
   "autoMemoryEnabled": true,
   "autoDreamEnabled": true,
   "theme": "custom:a1-theme"
