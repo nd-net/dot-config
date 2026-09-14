@@ -3,5 +3,8 @@
     "majd/repo",
     "mergestat/mergestat",
     "nd-net/personal"
+  ],
+  "trustedformulae": [
+    "daxartio/tap/kdbx"
   ]
 }
