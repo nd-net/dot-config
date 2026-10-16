@@ -12,3 +12,5 @@ iterm2/AppSupport
 !/codex/symlink
 !/codex/AGENTS.md
 settings.local.json
+*.bak
+*.backup.*

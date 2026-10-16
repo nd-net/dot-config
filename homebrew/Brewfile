@@ -172,6 +172,8 @@ cask "meta"
 cask "microsoft-teams"
 # Tool to create text-based art
 cask "monodraw"
+# Local-first alternative to Logitech Options+ for HID++ devices
+cask "openlogi"
 # AI usage tracker for Cursor, Claude Code, Codex, Copilot and more
 cask "openusage"
 # Turn vector drawings into program code
