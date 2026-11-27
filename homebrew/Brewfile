@@ -1,6 +1,7 @@
 tap "majd/repo"
 tap "mergestat/mergestat"
 tap "nd-net/personal", "https://github.com/nd-net/homebrew-personal.git"
+tap "boringbar/chest"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
 # Library for command-line editing
@@ -97,6 +98,8 @@ cask "affinity"
 cask "backblaze"
 # Text, code, and markup editor
 cask "bbedit"
+# Open source password manager with encrypted vault
+cask "bitwarden"
 # Analyze, inspect, and play songs
 cask "beatunes"
 # 3D model editor for boxy models and pixel art textures
@@ -111,6 +114,8 @@ cask "carbon-copy-cloner"
 cask "cardhop"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
+# Free, open-source menu bar manager
+cask "boringbar/chest/chest"
 # Managed desktop virtualization solution
 cask "citrix-workspace"
 # Barco ClickShare Desktop App for wireless presentation and conferencing
@@ -132,6 +137,8 @@ cask "google-earth-pro"
 cask "hazel"
 # Hex editor focussing on speed
 cask "hex-fiend"
+# Privacy-focused Chromium-based web browser
+cask "helium-browser"
 # Free and open-source media player
 cask "iina"
 # Java IDE by JetBrains
@@ -154,16 +161,22 @@ cask "nd-net/personal/keep-it@2"
 cask "knockknock"
 # Desktop reader for Kobo eBooks
 cask "kobo"
+# 3D globe and atlas for exploring geodata
+cask "kugelblitz"
 # Utility that shows the latest app updates
 cask "latest"
 # Productivity tool
 cask "launchbar"
+# Discover, download, and run local LLMs
+cask "lm-studio"
 # Software for Logitech devices
 cask "logi-options+"
 # Cable-free audio router
 cask "loopback"
 # Speech recognition tool
 cask "macwhisper"
+# Markdown previewer with bundled Quick Look extension
+cask "markdown-preview"
 # Manages online multimedia libs of German, Austrian and Swiss public broadcasters
 cask "mediathekview"
 # Tag editor for digital music
@@ -204,6 +217,8 @@ cask "screens-connect"
 cask "setapp"
 # Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
+# Team communication and collaboration software
+cask "slack"
 # Notepad with a built-in calculator
 cask "soulver"
 # Sound and audio controller
@@ -212,6 +227,8 @@ cask "soundsource"
 cask "subler"
 # Application for inspecting installer packages
 cask "suspicious-package"
+# Minimal GUI for AI code agents
+cask "t3-code"
 # Mesh VPN based on WireGuard
 cask "tailscale-app"
 # Remote access and connectivity software focused on security
@@ -226,6 +243,8 @@ cask "utm"
 cask "vimediamanager"
 # Multimedia player
 cask "vlc"
+# Wi-Fi and network monitoring tool
+cask "wifiman"
 # Network protocol analyzer
 cask "wireshark-app"
 # Allows access to WWDC livestreams, videos and sessions

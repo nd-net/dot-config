@@ -1,5 +1,6 @@
 {
   "trustedtaps": [
+    "https://github.com/boringbar/chest",
     "majd/repo",
     "mergestat/mergestat",
     "nd-net/personal"
