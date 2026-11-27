@@ -14,6 +14,25 @@ hosts:
         - 50100 192.168.10.51:3389
         - 50200 192.168.10.52:3389
         - 1433 192.168.10.52:1433
+    
+    homeassistant:
+        HostName: homeassistant.mora-atlas.ts.net
+        User: root
+        LocalForward:
+        - 15900 192.168.42.24:5900
+    
+    callibri-dev:
+        HostName: 192.168.10.101
+        User: bekaroot
+
+    callibri-int:
+        HostName: 192.168.10.102
+        User: bekaroot
+    
+    az.wsl:
+        HostName: 10.8.0.106
+        User: luser
+        RemoteForward: /home/luser/.gnupg/S.gpg-agent.mac ~/.local/share/gnupg/S.gpg-agent.extra
 
 templates:
     ipv6:
