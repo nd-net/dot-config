@@ -1,0 +1,27 @@
+# Global SwiftFormat options, linked to ~/.swiftformat by ./symlink.
+# A repository's own .swiftformat overrides single options from here.
+# Only deviations from SwiftFormat's defaults are listed.
+--swift-version 6.4
+
+# Explicit is better than implicit.
+--self insert
+--content-builder explicit
+--prefer-content-builder true
+
+--import-grouping access-control,alpha,testable-last
+
+# One case per line; --wrap-single-line-enum-cases needs wrapEnumCases.
+--wrap-single-line-enum-cases true
+
+--enable isEmpty
+--enable preferContains
+--enable preferCountWhere
+--enable preferFirstWhere
+--enable preferFlatMap
+--enable preferMinOverSorted
+--enable preferSwiftStringAPI
+--enable preferSwiftTesting
+--enable privateSwiftUIDynamicProperties
+--enable wrapDoBodies
+--enable wrapEnumCases
+--enable wrapGuardStatementBodies
