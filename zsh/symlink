@@ -1,3 +1,4 @@
 #!/bin/zsh
 cd ${0:A:h}
 ../xdg/link .zshenv ~/.zshenv
+../xdg/link ~/.local/state/zsh/sessions ~/.zsh_sessions

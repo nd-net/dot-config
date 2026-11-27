@@ -1,0 +1,3 @@
+#!/bin/zsh
+cd ${0:A:h}
+../xdg/link /Users/nd/.local/state/vim/viminfo /Users/nd/.viminfo

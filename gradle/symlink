@@ -1,0 +1,3 @@
+#!/bin/zsh
+cd ${0:A:h}
+../xdg/link ~/.local/share/gradle ~/.gradle
