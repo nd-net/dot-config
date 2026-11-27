@@ -1,3 +1,8 @@
 #!/bin/zsh
 cd ${0:A:h}
-../xdg/link /Users/nd/.local/state/node/repl_history /Users/nd/.node_repl_history
+../xdg/link ~/.local/state/node/repl_history ~/.node_repl_history
+exit_status=0
+for f in $HOME/.cache/v8/v8flags.*.json(N); do
+  ../xdg/link "$f" "$HOME/.${f:t}" || exit_status=1
+done
+exit $exit_status
