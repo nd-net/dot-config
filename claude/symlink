@@ -1,8 +1,8 @@
 #!/bin/zsh
-me=$(basename $0)
-mkdir -p ~/.claude
-for i in *; do
-    if [[ "$i" != "$me" ]]; then
-        ln -s "$(pwd)/$i" ~/.claude/
-    fi
+cd ${0:A:h}
+exit_status=0
+for file in *(N); do
+    [[ $file == ${0:t} ]] && continue
+    ../xdg/link $file ~/.claude/$file || exit_status=1
 done
+exit $exit_status

@@ -1,0 +1,41 @@
+#!/bin/zsh
+# usage: symlink [NAME...]
+#
+# Runs the `symlink` script of every subdirectory of $XDG_CONFIG_HOME, or of
+# the named subdirectories only. Each such script links its tool's
+# configuration to the place where the tool expects it, using ../xdg/link,
+# and is run from inside its own directory.
+#
+# Convention for a new tool: put an executable `symlink` script next to its
+# configuration, e.g. swiftformat/symlink containing
+#     #!/bin/zsh
+#     cd ${0:A:h}
+#     ../xdg/link config ~/.swiftformat
+emulate -L zsh
+
+config=${XDG_CONFIG_HOME:-$HOME/.config}
+self=${0:A}
+
+if (( $# )); then
+    scripts=(${^@}/symlink)
+    scripts=($config/$^scripts)
+else
+    scripts=($config/*/symlink(N))
+fi
+
+failed=()
+for script in $scripts; do
+    [[ ${script:A} == $self ]] && continue
+    name=${script:h:t}
+    if [[ ! -x $script ]]; then
+        print -u2 "${0:t}: $script is missing or not executable"
+        failed+=$name
+        continue
+    fi
+    (cd ${script:h} && ./symlink) || failed+=$name
+done
+
+if (( $#failed )); then
+    print -u2 "${0:t}: failed: $failed"
+    exit 1
+fi

@@ -1,0 +1,31 @@
+#!/bin/zsh
+# usage: link SOURCE TARGET
+#
+# Makes TARGET a symlink to SOURCE, so that it can be run again and again:
+# a TARGET that already links to SOURCE is left as it is, a missing one is
+# created (with its parent directories). Anything else at TARGET, a real file
+# or directory or a symlink to somewhere else, is reported and left alone, so
+# that no data is ever replaced by a link.
+emulate -L zsh
+
+if (( $# != 2 )); then
+    print -u2 "usage: ${0:t} SOURCE TARGET"
+    exit 2
+fi
+source=${1:a}
+target=${2:a}
+
+if [[ ! -e $source ]]; then
+    print -u2 "${0:t}: $source does not exist"
+    exit 1
+fi
+if [[ -L $target ]]; then
+    [[ ${target:A} == ${source:A} ]] && exit 0
+    print -u2 "${0:t}: skipped $target, it links to $(readlink $target) instead of $source"
+    exit 1
+fi
+if [[ -e $target ]]; then
+    print -u2 "${0:t}: skipped $target, it exists and is not a symlink"
+    exit 1
+fi
+mkdir -p ${target:h} && ln -s $source $target && print "linked $target -> $source"
