@@ -14,3 +14,4 @@ iterm2/AppSupport
 settings.local.json
 *.bak
 *.backup.*
+/hcloud
